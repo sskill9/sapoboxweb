@@ -1,0 +1,120 @@
+/* =========================
+   T001 和暦↔西暦 ツールCSS
+   ========================= */
+
+/* Topbarの微調整（スクロール時の影） */
+#T001-topbar.stuck,
+.navbar.sticky-top.is-stuck {
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+/* Noticeアイコン行の整列 */
+#T001-notice { line-height: 1.6; }
+
+/* 結果の視認性を少し上げる */
+#result {
+  font-variant-numeric: tabular-nums;
+  word-break: break-word;
+}
+
+/* タイムライン（更新履歴） */
+.timeline { list-style: none; padding-left: 0; }
+.timeline li { padding-left: 1rem; position: relative; margin-bottom: .5rem; }
+.timeline li::before {
+  content: "•";
+  position: absolute; left: 0; color: var(--bs-secondary);
+}
+
+/* フッターリンク */
+footer a { text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* アクセシビリティ：フォーカス見やすく */
+:focus-visible {
+  outline: 3px solid rgba(13,110,253,.5);
+  outline-offset: 2px;
+}
+
+/* 予防的：Bootstrap不在の最低限レイアウト（万一のフォールバック） */
+@supports not (display: grid) {
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; }
+  .container, .container-fluid { padding: 0 1rem; }
+}
+
+
+/* T001バッジに白い縁を付ける */
+#T001-badge-id {
+  border: 2px solid #fff;       /* 白いフチ */
+  border-radius: 9999px;        /* 完全な楕円形に */
+  box-shadow: 0 0 2px rgba(0,0,0,0.2); /* フチが背景と溶けないよう軽い影 */
+}
+
+.modal-xl {
+  max-width: 95% !important; /* 画面の95%まで拡張 */
+}
+
+
+/* ------------------------------------------------------------
+   モーダルヘッダーのデザイン統一（青背景＋白文字）
+   ------------------------------------------------------------ */
+.modal-header {
+  background-color: #0d6efd;   /* Bootstrapのprimary色 */
+  color: #fff;                 /* 文字を白に */
+  border-bottom: 1px solid rgba(255,255,255,0.3); /* 軽い白ラインで境界 */
+}
+
+/* タイトル文字（h2など）も白に */
+.modal-header .modal-title {
+  color: #fff;
+}
+
+/* 閉じるボタンの見た目（白系に統一） */
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);  /* 白化 */
+  opacity: 0.8;
+}
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   ロゴ用：白半透明の背景バッジ
+   ========================================================= */
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.85); /* 白・半透明 */
+  border-radius: 9999px; /* 丸型 */
+  padding: 4px 8px;
+  line-height: 1;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .5) inset; /* 薄い縁 */
+}
+.logo-badge img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+
+/* --- フッターSNSアイコンの縦位置をど真ん中に --- */
+.sapo-footer .d-inline-flex a{
+  display: inline-flex;          /* インライン→flexに */
+  align-items: center;           /* 垂直中央 */
+  justify-content: center;       /* 水平中央（将来アイコン枠付けても崩れない） */
+  line-height: 1;                /* 行高の影響を排除 */
+}
+
+.sapo-footer .d-inline-flex a img{
+  display: block;                /* ベースラインの影響を排除 */
+  width: 22px;
+  height: 22px;
+}
+
+/* まだ微妙に上に見える場合だけ、微調整（お好みで 0〜1px 程度） */
+.sapo-footer .d-inline-flex a img{
+  transform: translateY(0.5px);
+}
+
+

@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "toolId": "T001",
+      "name": "和暦↔西暦変換",
+      "path": "tools/T001_wareki-seireki/T001index.html",
+      "version": "v2025.10.24a",
+      "status": "stable",
+      "description": "和暦と西暦を相互変換。生年月日から満年齢を自動計算できるオフライン対応ツール。",
+      "updatedAt": "2025-10-26T17:00:00+09:00",
+      "tags": ["date", "converter", "offline"],
+      "thumbnail": "tools/T001_wareki-seireki/logo.svg",
+      "zip": "tools/T001_wareki-seireki/T001.zip",
+      "visible": true
+    },
+    {
+      "toolId": "T002",
+      "name": "Excelビューワー（ダミー）",
+      "path": "tools/T002_excel-viewer/T002index.html",
+      "version": "v2025.10.00",
+      "status": "dev",
+      "description": "Excelファイル（.xlsx）をブラウザ上で閲覧・検索・フィルタリングできるツール。",
+      "updatedAt": "2025-10-01T00:00:00+09:00",
+      "tags": ["excel", "viewer", "offline"],
+      "thumbnail": "tools/T002_excel-viewer/thumbnail.png",
+      "zip": "tools/T002_excel-viewer/T002.zip",
+      "visible": true
+    },
+    {
+      "toolId": "T003",
+      "name": "テンプレートランチャー（ダミー）",
+      "path": "tools/T003_template-launcher/T003index.html",
+      "version": "v2025.10.00",
+      "status": "dev",
+      "description": "定型文やメールテンプレートをカテゴリ別に検索・コピーできる支援ツール。",
+      "updatedAt": "2025-10-01T00:00:00+09:00",
+      "tags": ["template", "text", "utility"],
+      "thumbnail": "tools/T003_template-launcher/thumbnail.png",
+      "zip": "tools/T003_template-launcher/T003.zip",
+      "visible": true
+    },
+    {
+      "toolId": "T004",
+      "name": "漢字読み支援（ダミー）",
+      "path": "tools/T004_kanji-helper/T004index.html",
+      "version": "v2025.10.00",
+      "status": "beta",
+      "description": "難読漢字や人名漢字の読みを検索できる軽量辞書ツール。",
+      "updatedAt": "2025-10-01T00:00:00+09:00",
+      "tags": ["kanji", "dictionary", "search"],
+      "thumbnail": "tools/T004_kanji-helper/thumbnail.png",
+      "zip": "tools/T004_kanji-helper/T004.zip",
+      "visible": true
+    },
+    {
+      "toolId": "T005",
+      "name": "メモ帳（ダミー）",
+      "path": "tools/T005_memo/T005index.html",
+      "version": "v2025.10.00",
+      "status": "planned",
+      "description": "ブラウザ上で動作するシンプルなメモツール。ローカル保存対応。",
+      "updatedAt": "2025-10-01T00:00:00+09:00",
+      "tags": ["memo", "utility", "offline"],
+      "thumbnail": "tools/T005_memo/thumbnail.png",
+      "zip": "tools/T005_memo/T005.zip",
+      "visible": false
+    }
+  ]
+}

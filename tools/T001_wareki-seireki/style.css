@@ -1,0 +1,253 @@
+/* =====================================================
+   サポ箱 共通スタイルシート（構造化コメント版）
+   Version: 2025-10-22 JST
+   Purpose: TOP/各ツール共通の青系テーマ。Bootstrap上書き含む。
+   Notes:
+   - 既存のスタイルは一切変更せず、コメントのみ整備
+   - 省略禁止／構造完全性保持ルールに準拠
+===================================================== */
+
+/* =====================================================
+   1) カラーバリアブル／Bootstrap上書き（共通）
+===================================================== */
+/* ===============================
+   サポ箱 テーマ（青系ライト／濃色トップ＆フッター）
+   =============================== */
+:root {
+  --sapo-blue-700: #1e40af;
+  --sapo-blue-600: #2563eb;
+  --sapo-blue-500: #3b82f6;
+  --sapo-blue-100: #e0ecff;
+  --sapo-blue-50:  #eff6ff;
+  --sapo-ink-900:  #1f2937;
+  --sapo-ink-700:  #374151;
+  --sapo-ink-500:  #6b7280;
+  --sapo-border:   #e5e7eb;
+  --sapo-bg:       #ffffff;
+  --sapo-white:    #ffffff;
+
+  --bs-primary: var(--sapo-blue-700);
+  --bs-link-color: var(--sapo-blue-700);
+  --bs-link-hover-color: var(--sapo-blue-600);
+}
+
+/* =====================================================
+   2) ベース（タイポ／土台余白／スムージング）
+===================================================== */
+body {
+  background: var(--sapo-bg);
+  color: var(--sapo-ink-900);
+  padding-top: 4.5rem; /* 固定ナビ分の上余白 */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =====================================================
+   3) ヘッダー／ナビゲーションバー
+   - 動くグラデーション
+   - スクロール時の微調整
+   - ナビ文字色＆下線アニメ
+===================================================== */
+/* ===== トップバー（動くグラデ） ===== */
+.sapo-navbar {
+  background: linear-gradient(135deg, #1e40af, #2563eb, #3b82f6);
+  background-size: 200% 200%;
+  animation: gradflow 10s ease infinite;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
+  transition: filter 0.4s ease;
+}
+.sapo-navbar.scrolled { filter: brightness(1.15); }
+@keyframes gradflow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.sapo-navbar .navbar-brand,
+.sapo-navbar .nav-link {
+  color: var(--sapo-white);
+  position: relative;
+  overflow: hidden;
+}
+/* 下線アニメ（ナビ＆フッター共通リンク） */
+.sapo-navbar .nav-link::after,
+.footer-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0%; height: 2px;
+  background: var(--sapo-blue-100);
+  transition: width 0.3s ease;
+}
+.sapo-navbar .nav-link:hover::after,
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* =====================================================
+   4) ドロップダウン（ナビ内）
+===================================================== */
+.dropdown-menu {
+  border-radius: .5rem;
+  border: 1px solid var(--sapo-border);
+}
+.dropdown-item:hover {
+  background-color: var(--sapo-blue-100);
+  color: var(--sapo-blue-700);
+}
+
+/* =====================================================
+   5) コンテンツ共通（ヒーロー周辺／カード）
+===================================================== */
+.page-hero { padding: 1.25rem 0 0.75rem; }
+
+.card {
+  border: 1px solid var(--sapo-border);
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+}
+.shadow-soft { box-shadow: 0 6px 24px rgba(0, 0, 0, .05); }
+/* カード微浮き */
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.1); }
+
+/* =====================================================
+   6) ツールカード（右端2画像レイアウト）
+===================================================== */
+.tool-card .card-body { padding: 1rem 1.125rem; }
+.tool-info .badge { letter-spacing: 0.02em; }
+
+/* 右側の画像枠（ダミー） */
+.tool-images { flex-shrink: 0; }
+.dummy-img {
+  display: block;
+  border-radius: .5rem;
+  background: repeating-linear-gradient(
+    45deg,
+    #e9eef8,
+    #e9eef8 6px,
+    #dfe7f5 6px,
+    #dfe7f5 12px
+  );
+  border: 1px solid var(--sapo-border);
+}
+.small-thumb { width: 40px; height: 40px; }
+.large-thumb { width: 110px; height: 64px; }
+
+/* =====================================================
+   7) レスポンシブ（スマホ時のツール画像縮小）
+===================================================== */
+@media (max-width: 575.98px) {
+  .large-thumb { width: 96px; height: 56px; }
+  .small-thumb { width: 36px; height: 36px; }
+}
+
+/* =====================================================
+   8) フッター
+   - 動くグラデーション
+   - 法令リンクの下線アニメは共通定義を利用
+===================================================== */
+/* ===== フッター（動くグラデ＋高さ調整） ===== */
+.sapo-footer {
+  background: linear-gradient(135deg, #1e40af, #2563eb, #3b82f6);
+  background-size: 200% 200%;
+  animation: gradflow 12s ease infinite;
+  border-top: none;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, .08);
+  transition: filter 0.4s ease;
+  position: relative;
+}
+.sapo-footer.scrolled { filter: brightness(1.15); }
+.text-white-75 { color: rgba(255,255,255,.75); }
+.sapo-footer small { line-height: 1.3; }
+
+.footer-link {
+  color: var(--sapo-white);
+  text-decoration: none;
+  position: relative;
+}
+.footer-link:hover { color: var(--sapo-white); text-decoration: none; }
+
+/* =====================================================
+   9) アクセシビリティ（動き控えめ）
+===================================================== */
+/* 動き控えめ設定 */
+@media (prefers-reduced-motion: reduce) {
+  .sapo-navbar, .sapo-footer {
+    animation: none !important;
+    background-position: 50% 50% !important;
+  }
+  .card, .sapo-navbar .nav-link::after, .footer-link::after {
+    transition: none !important;
+  }
+}
+
+/* =====================================================
+   10) カーソル設定【mascot.png → 通常カーソルへ変更】
+   ===================================================== */
+
+/* サイト全体を標準カーソルに戻す */
+html, body {
+  cursor: auto;
+}
+
+/* クリック可能な要素はデフォルトの指カーソルに戻す */
+a, button, [role="button"], input[type="button"], input[type="submit"] {
+  cursor: pointer !important;
+}
+
+/* =====================================================
+   11) プロモーションカード（PR）【法令対応】
+   - アフィリエイトのUIスタイル（見た目のみ）
+   - 「PR」ラベルや開示文はHTML側で実装
+===================================================== */
+/* ===============================
+   プロモーションカード（PR）見た目調整
+   =============================== */
+.promo-card {
+  background: #fffbea;   /* やさしい薄黄背景 */
+  border-color: #fde68a; /* 薄い黄色の枠 */
+}
+.promo-card .badge {
+  /* 文字色はHTML側で text-dark、背景は inline style で #facc15 を指定 */
+}
+
+/* =====================================================
+   12) ロゴ背景強調（溶け込み防止用）
+   ===================================================== */
+.sapo-navbar .navbar-brand img[alt="サポ箱ロゴ"] {
+  background-color: rgba(255, 255, 255, 0.8); /* 白＋やや透け */
+  border-radius: 6px; /* 角を少し丸めて柔らかく */
+  padding: 2px 6px;  /* 周囲に余白 */
+  box-shadow: 0 0 4px rgba(0,0,0,0.15); /* ごく薄い影で浮かせる */
+}
+
+/* =====================================================
+   13) モーダル共通デザイン調整（全サイト共通）
+   ===================================================== */
+
+/* ① 最大幅を .modal-xl 相当に */
+.modal-dialog {
+  max-width: 1140px; /* Bootstrap .modal-xl と同等 */
+}
+@media (min-width: 1400px) {
+  .modal-dialog {
+    max-width: 95%;  /* 超広画面では画面の95%まで拡張 */
+  }
+}
+
+/* ② モーダルヘッダー（タイトルバー）白文字＋青背景 */
+.modal-header {
+  background-color: var(--sapo-blue-700); /* サポ箱テーマ青 */
+  color: var(--sapo-white);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.modal-header .modal-title {
+  color: var(--sapo-white);
+  font-weight: 600;
+}
+.modal-header .btn-close {
+  filter: brightness(0) invert(1); /* 白い閉じるボタン */
+  opacity: 0.8;
+}
+.modal-header .btn-close:hover {
+  opacity: 1;
+}

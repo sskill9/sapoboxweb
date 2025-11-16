@@ -1,0 +1,47 @@
+<!--
+  File: footer.html
+  Template: Support Tool Box / T000
+  Author: {TOOL_AUTHOR}
+  Version: {TOOL_VERSION}
+  Date: {TOOL_DATE} (JST)
+  Notes:
+    - No.77: 法令系リンク（利用規約／プライバシー／お問い合わせ）の「起点を必ず保持」。
+    - 必要に応じて {TERMS_URL} / {PRIVACY_URL} / {CONTACT_URL} をサイト実URLに置換してください。
+-->
+<footer class="stb-footer pt-4">
+  <div class="container">
+    <div class="row gy-3 align-items-center">
+      <div class="col-12 col-md">
+        <div class="d-flex align-items-center gap-2">
+          <img src="./logo.svg" alt="Support Tool Box" width="26" height="26" />
+          <span class="fw-semibold">Support Tool Box</span>
+        </div>
+        <div class="small mt-2">
+          <a href="{TERMS_URL}" target="_blank" rel="noopener">利用規約</a>
+          <span class="mx-2">|</span>
+          <a href="{PRIVACY_URL}" target="_blank" rel="noopener">プライバシー</a>
+          <span class="mx-2">|</span>
+          <a href="{CONTACT_URL}" target="_blank" rel="noopener">お問い合わせ</a>
+        </div>
+        <p class="small mb-0 mt-2">© <span id="copyYear"></span> Support Tool Box. All rights reserved.</p>
+      </div>
+      <div class="col-12 col-md-auto">
+        <div class="d-flex align-items-center gap-3">
+          <a class="icon" href="#" aria-label="X(Twitter)" title="X(Twitter)">
+            <img src="./icons/x.svg" alt="X" width="22" height="22" />
+          </a>
+          <a class="icon" href="#" aria-label="Facebook" title="Facebook">
+            <img src="./icons/facebook.svg" alt="Facebook" width="22" height="22" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // フッター内スクリプトは最小限に留める
+    (function(){
+      var y = document.getElementById('copyYear');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</footer>

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>T001 生年月日　和暦↔西暦変換 | サポ箱</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+
+  <!-- 共通テーマCSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- ツール固有CSS -->
+  <link rel="stylesheet" href="./tool.css" />
+
+  <meta name="description" content="生年月日の和暦↔西暦変換ツール（オフライン対応）。" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+  <link rel="icon" type="image/png" href="./favicon/favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicon/favicon-16.png" sizes="16x16" />
+  <meta name="theme-color" content="#0d47a1" />
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body-tertiary">
+  <!-- =========================================================
+       トップバー
+  ========================================================== -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="./mascot.png" alt="サポ箱" width="28" height="28" />
+        <span class="fw-bold">T001</span>
+        <span class="opacity-100 text-white">生年月日 和暦↔西暦変換</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="メニュー">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav id="topNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#howtoModal">使い方</a></li>
+          <li class="nav-item"><a class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#changelogModal">更新履歴</a></li>
+          <li class="nav-item"><a class="btn btn-warning btn-sm text-dark" data-bs-toggle="modal" data-bs-target="#downloadModal">ダウンロード</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       メイン
+  ========================================================== -->
+  <main class="container my-4" id="T001-main">
+    <section class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h1 class="h5 mb-0">生年月日　和暦↔西暦変換</h1>
+      </div>
+      <div class="card-body">
+
+        <!-- 入力エリア -->
+        <div class="row g-3 align-items-end">
+          <div class="col-12 col-md-6">
+            <label for="input-date" class="form-label">生年月日（YYYY-MM-DD または 和暦）</label>
+            <input id="input-date" type="text" class="form-control" placeholder="例）1990-04-01 / 平成2年4月1日 など" />
+            <div class="form-text">西暦（YYYY-MM-DD）または 和暦（明治・大正・昭和・平成・令和 いずれか）で入力</div>
+          </div>
+          <div class="col-12 col-md-3">
+            <label for="input-era" class="form-label">元号（任意）</label>
+            <select id="input-era" class="form-select">
+              <option value="">自動判定</option>
+              <option value="令和">令和</option>
+              <option value="平成">平成</option>
+              <option value="昭和">昭和</option>
+              <option value="大正">大正</option>
+              <option value="明治">明治</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-3">
+            <button id="btn-convert" class="btn btn-primary w-100">変換</button>
+          </div>
+        </div>
+
+        <!-- 結果 -->
+        <hr class="my-4" />
+        <div class="d-flex align-items-center justify-content-between">
+          <h2 class="h6 mb-0">結果</h2>
+          <button id="btn-copy" class="btn btn-outline-secondary btn-sm" aria-label="結果をコピー">コピー</button>
+        </div>
+        <div class="card-body">
+          <output id="result" class="fs-5" aria-live="polite"></output>
+          <div id="result-note" class="text-muted small mt-2"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       フッター（直書き：CORS回避）
+  ========================================================== -->
+  <div id="footer-container">
+<!-- footer.html | 共通フッター（A方式：各ツール同階層に同梱） -->
+<footer class="mt-auto sapo-footer border-top">
+  <div class="container py-3">
+    <div class="row gy-2 align-items-center">
+      <!-- 左：サイト名 -->
+      <div class="col-12 col-md">
+        <div class="d-flex align-items-center gap-2">
+          <span class="small text-light">&copy; <span id="year"></span> Support Tool Box(サポ箱)</span>
+        </div>
+      </div>
+
+      <!-- 中：SNSリンク（X / Facebook）※ローカルSVG -->
+      <div class="col-12 col-md-auto">
+        <nav class="d-inline-flex align-items-center gap-3">
+          <!-- X（旧Twitter） -->
+          <a href="#" class="link-light d-inline-flex align-items-center" aria-label="X (旧Twitter)" title="X (旧Twitter)">
+            <!-- ここにローカルSVGの<svg>が入ります（提供版そのまま） -->
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="link-light d-inline-flex align-items-center" aria-label="Facebook" title="Facebook">
+            <!-- ここにローカルSVGの<svg>が入ります（提供版そのまま） -->
+          </a>
+        </nav>
+      </div>
+
+      <!-- 右：リンク（利用規約モーダル／トップへ戻る） -->
+      <div class="col-12 col-md text-md-end">
+        <nav class="footer-links d-inline-flex gap-3">
+          <!-- 利用規約（モーダル表示） -->
+          <a href="#" class="link-light" data-bs-toggle="modal" data-bs-target="#termsModal">利用規約</a>
+          <a href="#" id="backToTop" class="link-light">トップへ戻る</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+  <!-- =========================================================
+       モーダル（使い方／更新履歴／ダウンロード／利用規約）
+  ========================================================== -->
+  <div class="modal fade" id="howtoModal" tabindex="-1" aria-labelledby="howtoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="howtoLabel">使い方</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2">西暦または和暦で日付を入力し、<strong>変換</strong>ボタンを押してください。</p>
+          <ul class="mb-0">
+            <li>西暦例：<code>1990-04-01</code>、<code>19900401</code></li>
+            <li>和暦例：<code>平成2年4月1日</code>、<code>昭和64/1/7</code></li>
+            <li>元号プルダウンは任意（未選択なら自動判定）</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="changelogModal" tabindex="-1" aria-labelledby="changelogLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="changelogLabel">更新履歴</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="mb-0">
+            <li>2025-10-29：フッター直書き化（file:// 直開き時のCORSエラー解消）</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="downloadLabel">ダウンロード</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">このツールはオフラインでも動作します。zipを解凍して <code>T001index.html</code> をダブルクリックで開いてください。</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 利用規約 -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="termsLabel">利用規約</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">本ツールは無保証です。利用による損害について当方は一切の責任を負いません。</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JS（Bootstrap / 既存スクリプト）
+  ========================================================== -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // スクロール検知（既存機能：保持）
+    (function () {
+      var lastY = 0;
+      function onScroll() {
+        var y = window.scrollY || document.documentElement.scrollTop;
+        if (Math.abs(y - lastY) > 16) {
+          lastY = y;
+        }
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // フッター直書き版：年表示＆トップへ戻る初期化
+    (function () {
+      // 年 表示
+      var y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+
+      // トップへ戻る
+      var link = document.getElementById("backToTop");
+      if (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
