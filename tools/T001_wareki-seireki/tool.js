@@ -29,9 +29,21 @@
   const out = $("#result"), note = $("#result-note");
 
   document.addEventListener("DOMContentLoaded", () => {
+    setCurrentYear();
+    setupStickyTopbar();
+    restoreState();
+    bindDirectionRadios();
+    bindPrimaryButtons();
+    bindUtilityButtons();
+    bindKeyboardShortcuts();
+  });
+
+  function setCurrentYear() {
     const yspan = $("#current-year");
     if (yspan) yspan.textContent = String(new Date().getFullYear());
+  }
 
+  function setupStickyTopbar() {
     const topbar = $("#T001-topbar");
     const onScroll = () => {
       if (!topbar) return;
@@ -40,18 +52,24 @@
     };
     document.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
+  }
 
-    restoreState();
-
+  function bindDirectionRadios() {
     [dirAuto, dirW2G, dirG2W].forEach(r => r?.addEventListener("change", handleDirectionChange));
+  }
 
+  function bindPrimaryButtons() {
     /* ▼▼ ここを修正：全ボタンにイベントを束ねて付与 ▼▼ */
     btnConvertList.forEach(btn => btn.addEventListener("click", handleConvert));
     btnClearList.forEach(btn => btn.addEventListener("click", clearInputs));
     /* ▲▲ 修正ここまで ▲▲ */
+  }
 
+  function bindUtilityButtons() {
     btnCopy?.addEventListener("click", copyResult);
+  }
 
+  function bindKeyboardShortcuts() {
     document.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && !e.isComposing) {
         if (document.querySelector(".modal.show")) return;
@@ -62,7 +80,7 @@
         focusFirstInput();
       }
     });
-  });
+  }
 
   const LS_KEY = "T001:state";
   function saveState() {
