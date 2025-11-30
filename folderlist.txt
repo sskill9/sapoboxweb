@@ -1,12 +1,11 @@
 フォルダー パスの一覧:  ボリューム Windows
 ボリューム シリアル番号は 482E-97BB です
 C:.
-│  20251025065817.zip
-│  20251026065504.zip
-│  20251026151312.zip
+│  .gitattributes
 │  20251026152924.zip
 │  backup7z_ansi.bat
 │  changelog.html
+│  codex-init.patch
 │  folderlist.txt
 │  fragments.js
 │  howto.html
@@ -20,102 +19,10 @@ C:.
 │  tool.meta.json
 │  treefolderlist.bat
 │  
-├─assets
-│  ├─bootstrap-5.3.8-dist
-│  │  ├─css
-│  │  │      bootstrap-grid.css
-│  │  │      bootstrap-grid.css.map
-│  │  │      bootstrap-grid.min.css
-│  │  │      bootstrap-grid.min.css.map
-│  │  │      bootstrap-grid.rtl.css
-│  │  │      bootstrap-grid.rtl.css.map
-│  │  │      bootstrap-grid.rtl.min.css
-│  │  │      bootstrap-grid.rtl.min.css.map
-│  │  │      bootstrap-reboot.css
-│  │  │      bootstrap-reboot.css.map
-│  │  │      bootstrap-reboot.min.css
-│  │  │      bootstrap-reboot.min.css.map
-│  │  │      bootstrap-reboot.rtl.css
-│  │  │      bootstrap-reboot.rtl.css.map
-│  │  │      bootstrap-reboot.rtl.min.css
-│  │  │      bootstrap-reboot.rtl.min.css.map
-│  │  │      bootstrap-utilities.css
-│  │  │      bootstrap-utilities.css.map
-│  │  │      bootstrap-utilities.min.css
-│  │  │      bootstrap-utilities.min.css.map
-│  │  │      bootstrap-utilities.rtl.css
-│  │  │      bootstrap-utilities.rtl.css.map
-│  │  │      bootstrap-utilities.rtl.min.css
-│  │  │      bootstrap-utilities.rtl.min.css.map
-│  │  │      bootstrap.css
-│  │  │      bootstrap.css.map
-│  │  │      bootstrap.min.css
-│  │  │      bootstrap.min.css.map
-│  │  │      bootstrap.rtl.css
-│  │  │      bootstrap.rtl.css.map
-│  │  │      bootstrap.rtl.min.css
-│  │  │      bootstrap.rtl.min.css.map
-│  │  │      
-│  │  └─js
-│  │          bootstrap.bundle.js
-│  │          bootstrap.bundle.js.map
-│  │          bootstrap.bundle.min.js
-│  │          bootstrap.bundle.min.js.map
-│  │          bootstrap.esm.js
-│  │          bootstrap.esm.js.map
-│  │          bootstrap.esm.min.js
-│  │          bootstrap.esm.min.js.map
-│  │          bootstrap.js
-│  │          bootstrap.js.map
-│  │          bootstrap.min.js
-│  │          bootstrap.min.js.map
-│  │          
-│  ├─css
-│  │      base.css
-│  │      tools.css
-│  │      
-│  ├─favicon
-│  │      favicon .ico
-│  │      favicon.svg
-│  │      favicon2.ico
-│  │      favicon_32.png
-│  │      favicon_512.png
-│  │      
-│  ├─js
-│  │      common.js
-│  │      loader.js
-│  │      
-│  └─logo
-│          logo-stb-hybrid-compact.svg
-│          logo-stb-hybrid-full.svg
-│          
-├─BK
-│  │  20251021185827.zip
-│  │  20251021194336.zip
-│  │  20251021194836.zip
-│  │  20251021205258.zip
-│  │  20251021225304.zip
-│  │  20251022002454.zip
-│  │  20251022213520.zip
-│  │  20251022220515.zip
-│  │  20251025063319.zip
-│  │  aa.bat
-│  │  ExportFolderTree.bat
-│  │  ExportFolderTree_MD.bat
-│  │  ExportFolderTree_pureA_final.bat
-│  │  ExportFolderTree_pureA_v2.bat
-│  │  
-│  └─_folder_export
-│          export_log.txt
-│          folder_list.txt
-│          _dirs.tmp
-│          _files.tmp
-│          
-├─components
-│      footer.html
-│      topbar.html
+├─test-hello
+│      hello.js
+│      index.html
 │      
-├─github-learning
 └─tools
     ├─excel-viewer
     │  │  index.html
