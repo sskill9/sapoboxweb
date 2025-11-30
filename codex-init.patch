@@ -1,0 +1,110 @@
+diff --git a/tools/T001_wareki-seireki/tool.js b/tools/T001_wareki-seireki/tool.js
+index 7dd230254c40f9662bb172c871165243e705b932..f8ffc4027924cf6c9339bf40b3f21a3bb038f1bf 100644
+--- a/tools/T001_wareki-seireki/tool.js
++++ b/tools/T001_wareki-seireki/tool.js
+@@ -7,84 +7,102 @@
+ 
+   const ERAS = [
+     { key: "R", jp: "令和", start: new Date(2019, 4, 1) },
+     { key: "H", jp: "平成", start: new Date(1989, 0, 8) },
+     { key: "S", jp: "昭和", start: new Date(1926, 11, 25) },
+     { key: "T", jp: "大正", start: new Date(1912, 6, 30) },
+     { key: "M", jp: "明治", start: new Date(1868, 0, 25) },
+   ];
+ 
+   const $ = (sel) => document.querySelector(sel);
+   const dirAuto = $("#dir-auto"), dirW2G = $("#dir-w2g"), dirG2W = $("#dir-g2w");
+   const autoBox = $("#auto-inputs"), w2gBox = $("#w2g-inputs"), g2wBox = $("#g2w-inputs");
+   const autoText = $("#auto-text");
+   const era = $("#era"), wYear = $("#wareki-year"), wMonth = $("#wareki-month"), wDay = $("#wareki-day");
+   const year = $("#year"), month = $("#month"), day = $("#day");
+ 
+   /* ▼▼ ここを修正：重複IDでも全取得して全てにイベント付与 ▼▼ */
+   const btnConvertList = document.querySelectorAll('[id="btn-convert"]');
+   const btnClearList   = document.querySelectorAll('[id="btn-clear"]');
+   /* ▲▲ 修正ここまで ▲▲ */
+ 
+   const btnCopy = $("#btn-copy");
+   const out = $("#result"), note = $("#result-note");
+ 
+   document.addEventListener("DOMContentLoaded", () => {
++    setCurrentYear();
++    setupStickyTopbar();
++    restoreState();
++    bindDirectionRadios();
++    bindPrimaryButtons();
++    bindUtilityButtons();
++    bindKeyboardShortcuts();
++  });
++
++  function setCurrentYear() {
+     const yspan = $("#current-year");
+     if (yspan) yspan.textContent = String(new Date().getFullYear());
++  }
+ 
++  function setupStickyTopbar() {
+     const topbar = $("#T001-topbar");
+     const onScroll = () => {
+       if (!topbar) return;
+       if (window.scrollY > 2) topbar.classList.add("is-stuck");
+       else topbar.classList.remove("is-stuck");
+     };
+     document.addEventListener("scroll", onScroll, { passive: true });
+     onScroll();
++  }
+ 
+-    restoreState();
+-
++  function bindDirectionRadios() {
+     [dirAuto, dirW2G, dirG2W].forEach(r => r?.addEventListener("change", handleDirectionChange));
++  }
+ 
++  function bindPrimaryButtons() {
+     /* ▼▼ ここを修正：全ボタンにイベントを束ねて付与 ▼▼ */
+     btnConvertList.forEach(btn => btn.addEventListener("click", handleConvert));
+     btnClearList.forEach(btn => btn.addEventListener("click", clearInputs));
+     /* ▲▲ 修正ここまで ▲▲ */
++  }
+ 
++  function bindUtilityButtons() {
+     btnCopy?.addEventListener("click", copyResult);
++  }
+ 
++  function bindKeyboardShortcuts() {
+     document.addEventListener("keydown", (e) => {
+       if (e.key === "Enter" && !e.isComposing) {
+         if (document.querySelector(".modal.show")) return;
+         handleConvert();
+       }
+       if ((e.ctrlKey || e.metaKey) && (e.key.toLowerCase() === "k")) {
+         e.preventDefault();
+         focusFirstInput();
+       }
+     });
+-  });
++  }
+ 
+   const LS_KEY = "T001:state";
+   function saveState() {
+     const state = {
+       dir: currentDir(),
+       auto: autoText?.value || "",
+       w2g: { era: era?.value, y: wYear?.value, m: wMonth?.value, d: wDay?.value },
+       g2w: { y: year?.value, m: month?.value, d: day?.value },
+     };
+     try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch {}
+   }
+   function restoreState() {
+     let s = null;
+     try { s = JSON.parse(localStorage.getItem(LS_KEY) || "null"); } catch {}
+     if (s) {
+       (s.dir === "w2g" ? dirW2G : s.dir === "g2w" ? dirG2W : dirAuto).checked = true;
+       if (autoText) autoText.value = s.auto || "";
+       if (era && s.w2g) era.value = s.w2g.era ?? "R";
+       if (wYear && s.w2g) wYear.value = s.w2g.y ?? "";
+       if (wMonth && s.w2g) wMonth.value = s.w2g.m ?? "";
+       if (wDay && s.w2g) wDay.value = s.w2g.d ?? "";
+       if (year && s.g2w) year.value = s.g2w.y ?? "";
+       if (month && s.g2w) month.value = s.g2w.m ?? "";
+       if (day && s.g2w) day.value = s.g2w.d ?? "";
+     }
