@@ -59,8 +59,7 @@ C:.
     Да          howto.html
     Да          
     ДеДЯT000_tp
-    Да  Да  20251130150731.zip
-    Да  Да  20251130193453.zip
+    Да  Да  20251202113516.zip
     Да  Да  backup7z_ansi.bat
     Да  Да  content.js
     Да  Да  Download_zip.bat
@@ -163,8 +162,6 @@ C:.
     Да                  bootstrap.bundle.min.js
     Да                  
     ДеДЯT003_hanko
-    Да  Да  20251130150731.zip
-    Да  Да  20251130193453.zip
     Да  Да  backup7z_ansi.bat
     Да  Да  content.js
     Да  Да  Download_zip.bat
@@ -180,7 +177,7 @@ C:.
     Да  Да  top.js
     Да  Да  
     Да  ДеДЯBK
-    Да  Да  Да  20251130024415.zip
+    Да  Да  Да  20251130193453.zip
     Да  Да  Да  
     Да  Да  ДдДЯold
     Да  Да      Да  footer.html
@@ -201,222 +198,265 @@ C:.
     Да          ДдДЯjs
     Да                  bootstrap.bundle.min.js
     Да                  
-    ДдДЯT004_OCR01
-        Да  20251130150731.zip
-        Да  20251130193453.zip
+    ДеДЯT004_OCR01
+    Да  Да  20251130150731.zip
+    Да  Да  20251130193453.zip
+    Да  Да  20251202113152.zip
+    Да  Да  backup7z_ansi.bat
+    Да  Да  content.js
+    Да  Да  Download_zip.bat
+    Да  Да  favicon.svg
+    Да  Да  footer.js
+    Да  Да  modal-changelog.js
+    Да  Да  modal-howto.js
+    Да  Да  modal-links.js
+    Да  Да  modal-terms.js
+    Да  Да  T004.zip
+    Да  Да  T004index.html
+    Да  Да  top.js
+    Да  Да  
+    Да  ДеДЯBK
+    Да  Да  Да  20251130024415.zip
+    Да  Да  Да  
+    Да  Да  ДеДЯold
+    Да  Да  Да  Да  footer.html
+    Да  Да  Да  Да  logo.svg
+    Да  Да  Да  Да  style.css
+    Да  Да  Да  Да  tool.css
+    Да  Да  Да  Да  tool.js
+    Да  Да  Да  Да  
+    Да  Да  Да  ДдДЯicons
+    Да  Да  Да          facebook.svg
+    Да  Да  Да          x.svg
+    Да  Да  Да          
+    Да  Да  ДдДЯtesseract.js-5.0.4
+    Да  Да      Да  .eslintrc
+    Да  Да      Да  .gitignore
+    Да  Да      Да  .gitpod.Dockerfile
+    Да  Да      Да  .gitpod.yml
+    Да  Да      Да  .npmignore
+    Да  Да      Да  babel.config.json
+    Да  Да      Да  LICENSE.md
+    Да  Да      Да  package-lock.json
+    Да  Да      Да  package.json
+    Да  Да      Да  README.md
+    Да  Да      Да  
+    Да  Да      ДеДЯ.github
+    Да  Да      Да  Да  FUNDING.yml
+    Да  Да      Да  Да  SECURITY.md
+    Да  Да      Да  Да  
+    Да  Да      Да  ДеДЯISSUE_TEMPLATE
+    Да  Да      Да  Да      bug_report.md
+    Да  Да      Да  Да      feature_request.md
+    Да  Да      Да  Да      
+    Да  Да      Да  ДдДЯworkflows
+    Да  Да      Да          codeql-analysis.yml
+    Да  Да      Да          node.js.yml
+    Да  Да      Да          
+    Да  Да      ДеДЯbenchmarks
+    Да  Да      Да  Да  readme.md
+    Да  Да      Да  Да  
+    Да  Да      Да  ДеДЯbrowser
+    Да  Да      Да  Да      auto-rotate-benchmark.html
+    Да  Да      Да  Да      speed-benchmark.html
+    Да  Да      Да  Да      
+    Да  Да      Да  ДеДЯdata
+    Да  Да      Да  Да      meditations.jpg
+    Да  Да      Да  Да      testocr.png
+    Да  Да      Да  Да      tyger.jpg
+    Да  Да      Да  Да      
+    Да  Да      Да  ДдДЯnode
+    Да  Да      Да          speed-benchmark.js
+    Да  Да      Да          
+    Да  Да      ДеДЯdocs
+    Да  Да      Да  Да  api.md
+    Да  Да      Да  Да  examples.md
+    Да  Да      Да  Да  faq.md
+    Да  Да      Да  Да  image-format.md
+    Да  Да      Да  Да  local-installation.md
+    Да  Да      Да  Да  performance.md
+    Да  Да      Да  Да  tesseract_lang_list.md
+    Да  Да      Да  Да  workers_vs_schedulers.md
+    Да  Да      Да  Да  
+    Да  Да      Да  ДдДЯimages
+    Да  Да      Да          demo.gif
+    Да  Да      Да          tesseract.png
+    Да  Да      Да          tesseract_dark.png
+    Да  Да      Да          video-demo.gif
+    Да  Да      Да          
+    Да  Да      ДеДЯexamples
+    Да  Да      Да  ДеДЯbrowser
+    Да  Да      Да  Да      basic-efficient.html
+    Да  Да      Да  Да      basic-scheduler.html
+    Да  Да      Да  Да      download-pdf.html
+    Да  Да      Да  Да      image-processing.html
+    Да  Да      Да  Да      
+    Да  Да      Да  ДдДЯnode
+    Да  Да      Да          download-pdf.js
+    Да  Да      Да          image-processing.js
+    Да  Да      Да          recognize.js
+    Да  Да      Да          scheduler.js
+    Да  Да      Да          
+    Да  Да      ДеДЯscripts
+    Да  Да      Да      .eslintrc
+    Да  Да      Да      rollup.esm.mjs
+    Да  Да      Да      server.js
+    Да  Да      Да      test-helper.js
+    Да  Да      Да      webpack.config.common.js
+    Да  Да      Да      webpack.config.prod.js
+    Да  Да      Да      
+    Да  Да      ДеДЯsrc
+    Да  Да      Да  Да  createJob.js
+    Да  Да      Да  Да  createScheduler.js
+    Да  Да      Да  Да  createWorker.js
+    Да  Да      Да  Да  index.d.ts
+    Да  Да      Да  Да  index.js
+    Да  Да      Да  Да  Tesseract.js
+    Да  Да      Да  Да  
+    Да  Да      Да  ДеДЯconstants
+    Да  Да      Да  Да      defaultOptions.js
+    Да  Да      Да  Да      imageType.js
+    Да  Да      Да  Да      languages.js
+    Да  Да      Да  Да      OEM.js
+    Да  Да      Да  Да      PSM.js
+    Да  Да      Да  Да      
+    Да  Да      Да  ДеДЯutils
+    Да  Да      Да  Да      circularize.js
+    Да  Да      Да  Да      getEnvironment.js
+    Да  Да      Да  Да      getId.js
+    Да  Да      Да  Да      log.js
+    Да  Да      Да  Да      resolvePaths.js
+    Да  Да      Да  Да      
+    Да  Да      Да  ДеДЯworker
+    Да  Да      Да  Да  ДеДЯbrowser
+    Да  Да      Да  Да  Да      defaultOptions.js
+    Да  Да      Да  Да  Да      index.js
+    Да  Да      Да  Да  Да      loadImage.js
+    Да  Да      Да  Да  Да      onMessage.js
+    Да  Да      Да  Да  Да      send.js
+    Да  Да      Да  Да  Да      spawnWorker.js
+    Да  Да      Да  Да  Да      terminateWorker.js
+    Да  Да      Да  Да  Да      
+    Да  Да      Да  Да  ДдДЯnode
+    Да  Да      Да  Да          defaultOptions.js
+    Да  Да      Да  Да          index.js
+    Да  Да      Да  Да          loadImage.js
+    Да  Да      Да  Да          onMessage.js
+    Да  Да      Да  Да          send.js
+    Да  Да      Да  Да          spawnWorker.js
+    Да  Да      Да  Да          terminateWorker.js
+    Да  Да      Да  Да          
+    Да  Да      Да  ДдДЯworker-script
+    Да  Да      Да      Да  index.js
+    Да  Да      Да      Да  
+    Да  Да      Да      ДеДЯbrowser
+    Да  Да      Да      Да      cache.js
+    Да  Да      Да      Да      getCore.js
+    Да  Да      Да      Да      gunzip.js
+    Да  Да      Да      Да      index.js
+    Да  Да      Да      Да      
+    Да  Да      Да      ДеДЯconstants
+    Да  Да      Да      Да      defaultOutput.js
+    Да  Да      Да      Да      defaultParams.js
+    Да  Да      Да      Да      
+    Да  Да      Да      ДеДЯnode
+    Да  Да      Да      Да      cache.js
+    Да  Да      Да      Да      getCore.js
+    Да  Да      Да      Да      gunzip.js
+    Да  Да      Да      Да      index.js
+    Да  Да      Да      Да      
+    Да  Да      Да      ДдДЯutils
+    Да  Да      Да              arrayBufferToBase64.js
+    Да  Да      Да              dump.js
+    Да  Да      Да              setImage.js
+    Да  Да      Да              
+    Да  Да      ДдДЯtests
+    Да  Да          Да  .eslintrc
+    Да  Да          Да  constants.js
+    Да  Да          Да  detect.test.html
+    Да  Да          Да  detect.test.js
+    Да  Да          Да  FS.test.html
+    Да  Да          Да  FS.test.js
+    Да  Да          Да  recognize.test.html
+    Да  Да          Да  recognize.test.js
+    Да  Да          Да  scheduler.test.html
+    Да  Да          Да  scheduler.test.js
+    Да  Да          Да  
+    Да  Да          ДдДЯassets
+    Да  Да              ДеДЯimages
+    Да  Да              Да      bill.png
+    Да  Да              Да      chinese.png
+    Да  Да              Да      cosmic.png
+    Да  Да              Да      simple-180.jpg
+    Да  Да              Да      simple-270.jpg
+    Да  Да              Да      simple-90.jpg
+    Да  Да              Да      simple.bmp
+    Да  Да              Да      simple.gif
+    Да  Да              Да      simple.jpg
+    Да  Да              Да      simple.pbm
+    Да  Да              Да      simple.png
+    Да  Да              Да      simple.webp
+    Да  Да              Да      testocr.jpg
+    Да  Да              Да      testocr.pbm
+    Да  Да              Да      testocr.png
+    Да  Да              Да      
+    Да  Да              ДдДЯtraineddata
+    Да  Да                      chi_tra.traineddata
+    Да  Да                      eng.traineddata
+    Да  Да                      osd.traineddata
+    Да  Да                      
+    Да  ДдДЯlibs
+    Да      Да  jpn.traineddata
+    Да      Да  
+    Да      ДеДЯbootstrap-5.3.8-dist
+    Да      Да  ДеДЯcss
+    Да      Да  Да      bootstrap.min.css
+    Да      Да  Да      
+    Да      Да  ДдДЯjs
+    Да      Да          bootstrap.bundle.min.js
+    Да      Да          
+    Да      ДдДЯtesseract
+    Да              tesseract.min.js
+    Да              worker.min.js
+    Да              
+    ДдДЯT005_CSV-Convert01
+        Да  20251202113516.zip
         Да  backup7z_ansi.bat
         Да  content.js
+        Да  csv_tool_spec.md
         Да  Download_zip.bat
+        Да  encoding-helper.js
         Да  favicon.svg
         Да  footer.js
         Да  modal-changelog.js
         Да  modal-howto.js
         Да  modal-links.js
         Да  modal-terms.js
-        Да  T004index.html
+        Да  sapobox_rule_No85_complete.md
+        Да  T005index.html
         Да  top.js
         Да  
         ДеДЯBK
         Да  Да  20251130024415.zip
         Да  Да  
-        Да  ДеДЯold
-        Да  Да  Да  footer.html
-        Да  Да  Да  logo.svg
-        Да  Да  Да  style.css
-        Да  Да  Да  tool.css
-        Да  Да  Да  tool.js
-        Да  Да  Да  
-        Да  Да  ДдДЯicons
-        Да  Да          facebook.svg
-        Да  Да          x.svg
-        Да  Да          
-        Да  ДдДЯtesseract.js-5.0.4
-        Да      Да  .eslintrc
-        Да      Да  .gitignore
-        Да      Да  .gitpod.Dockerfile
-        Да      Да  .gitpod.yml
-        Да      Да  .npmignore
-        Да      Да  babel.config.json
-        Да      Да  LICENSE.md
-        Да      Да  package-lock.json
-        Да      Да  package.json
-        Да      Да  README.md
+        Да  ДдДЯold
+        Да      Да  footer.html
+        Да      Да  logo.svg
+        Да      Да  style.css
+        Да      Да  tool.css
+        Да      Да  tool.js
         Да      Да  
-        Да      ДеДЯ.github
-        Да      Да  Да  FUNDING.yml
-        Да      Да  Да  SECURITY.md
-        Да      Да  Да  
-        Да      Да  ДеДЯISSUE_TEMPLATE
-        Да      Да  Да      bug_report.md
-        Да      Да  Да      feature_request.md
-        Да      Да  Да      
-        Да      Да  ДдДЯworkflows
-        Да      Да          codeql-analysis.yml
-        Да      Да          node.js.yml
-        Да      Да          
-        Да      ДеДЯbenchmarks
-        Да      Да  Да  readme.md
-        Да      Да  Да  
-        Да      Да  ДеДЯbrowser
-        Да      Да  Да      auto-rotate-benchmark.html
-        Да      Да  Да      speed-benchmark.html
-        Да      Да  Да      
-        Да      Да  ДеДЯdata
-        Да      Да  Да      meditations.jpg
-        Да      Да  Да      testocr.png
-        Да      Да  Да      tyger.jpg
-        Да      Да  Да      
-        Да      Да  ДдДЯnode
-        Да      Да          speed-benchmark.js
-        Да      Да          
-        Да      ДеДЯdocs
-        Да      Да  Да  api.md
-        Да      Да  Да  examples.md
-        Да      Да  Да  faq.md
-        Да      Да  Да  image-format.md
-        Да      Да  Да  local-installation.md
-        Да      Да  Да  performance.md
-        Да      Да  Да  tesseract_lang_list.md
-        Да      Да  Да  workers_vs_schedulers.md
-        Да      Да  Да  
-        Да      Да  ДдДЯimages
-        Да      Да          demo.gif
-        Да      Да          tesseract.png
-        Да      Да          tesseract_dark.png
-        Да      Да          video-demo.gif
-        Да      Да          
-        Да      ДеДЯexamples
-        Да      Да  ДеДЯbrowser
-        Да      Да  Да      basic-efficient.html
-        Да      Да  Да      basic-scheduler.html
-        Да      Да  Да      download-pdf.html
-        Да      Да  Да      image-processing.html
-        Да      Да  Да      
-        Да      Да  ДдДЯnode
-        Да      Да          download-pdf.js
-        Да      Да          image-processing.js
-        Да      Да          recognize.js
-        Да      Да          scheduler.js
-        Да      Да          
-        Да      ДеДЯscripts
-        Да      Да      .eslintrc
-        Да      Да      rollup.esm.mjs
-        Да      Да      server.js
-        Да      Да      test-helper.js
-        Да      Да      webpack.config.common.js
-        Да      Да      webpack.config.prod.js
-        Да      Да      
-        Да      ДеДЯsrc
-        Да      Да  Да  createJob.js
-        Да      Да  Да  createScheduler.js
-        Да      Да  Да  createWorker.js
-        Да      Да  Да  index.d.ts
-        Да      Да  Да  index.js
-        Да      Да  Да  Tesseract.js
-        Да      Да  Да  
-        Да      Да  ДеДЯconstants
-        Да      Да  Да      defaultOptions.js
-        Да      Да  Да      imageType.js
-        Да      Да  Да      languages.js
-        Да      Да  Да      OEM.js
-        Да      Да  Да      PSM.js
-        Да      Да  Да      
-        Да      Да  ДеДЯutils
-        Да      Да  Да      circularize.js
-        Да      Да  Да      getEnvironment.js
-        Да      Да  Да      getId.js
-        Да      Да  Да      log.js
-        Да      Да  Да      resolvePaths.js
-        Да      Да  Да      
-        Да      Да  ДеДЯworker
-        Да      Да  Да  ДеДЯbrowser
-        Да      Да  Да  Да      defaultOptions.js
-        Да      Да  Да  Да      index.js
-        Да      Да  Да  Да      loadImage.js
-        Да      Да  Да  Да      onMessage.js
-        Да      Да  Да  Да      send.js
-        Да      Да  Да  Да      spawnWorker.js
-        Да      Да  Да  Да      terminateWorker.js
-        Да      Да  Да  Да      
-        Да      Да  Да  ДдДЯnode
-        Да      Да  Да          defaultOptions.js
-        Да      Да  Да          index.js
-        Да      Да  Да          loadImage.js
-        Да      Да  Да          onMessage.js
-        Да      Да  Да          send.js
-        Да      Да  Да          spawnWorker.js
-        Да      Да  Да          terminateWorker.js
-        Да      Да  Да          
-        Да      Да  ДдДЯworker-script
-        Да      Да      Да  index.js
-        Да      Да      Да  
-        Да      Да      ДеДЯbrowser
-        Да      Да      Да      cache.js
-        Да      Да      Да      getCore.js
-        Да      Да      Да      gunzip.js
-        Да      Да      Да      index.js
-        Да      Да      Да      
-        Да      Да      ДеДЯconstants
-        Да      Да      Да      defaultOutput.js
-        Да      Да      Да      defaultParams.js
-        Да      Да      Да      
-        Да      Да      ДеДЯnode
-        Да      Да      Да      cache.js
-        Да      Да      Да      getCore.js
-        Да      Да      Да      gunzip.js
-        Да      Да      Да      index.js
-        Да      Да      Да      
-        Да      Да      ДдДЯutils
-        Да      Да              arrayBufferToBase64.js
-        Да      Да              dump.js
-        Да      Да              setImage.js
-        Да      Да              
-        Да      ДдДЯtests
-        Да          Да  .eslintrc
-        Да          Да  constants.js
-        Да          Да  detect.test.html
-        Да          Да  detect.test.js
-        Да          Да  FS.test.html
-        Да          Да  FS.test.js
-        Да          Да  recognize.test.html
-        Да          Да  recognize.test.js
-        Да          Да  scheduler.test.html
-        Да          Да  scheduler.test.js
-        Да          Да  
-        Да          ДдДЯassets
-        Да              ДеДЯimages
-        Да              Да      bill.png
-        Да              Да      chinese.png
-        Да              Да      cosmic.png
-        Да              Да      simple-180.jpg
-        Да              Да      simple-270.jpg
-        Да              Да      simple-90.jpg
-        Да              Да      simple.bmp
-        Да              Да      simple.gif
-        Да              Да      simple.jpg
-        Да              Да      simple.pbm
-        Да              Да      simple.png
-        Да              Да      simple.webp
-        Да              Да      testocr.jpg
-        Да              Да      testocr.pbm
-        Да              Да      testocr.png
-        Да              Да      
-        Да              ДдДЯtraineddata
-        Да                      chi_tra.traineddata
-        Да                      eng.traineddata
-        Да                      osd.traineddata
-        Да                      
+        Да      ДдДЯicons
+        Да              facebook.svg
+        Да              x.svg
+        Да              
         ДдДЯlibs
-            Да  jpn.traineddata
+            Да  encoding.min.js
             Да  
-            ДеДЯbootstrap-5.3.8-dist
-            Да  ДеДЯcss
-            Да  Да      bootstrap.min.css
-            Да  Да      
-            Да  ДдДЯjs
-            Да          bootstrap.bundle.min.js
-            Да          
-            ДдДЯtesseract
-                    tesseract.min.js
-                    worker.min.js
-                    
+            ДдДЯbootstrap-5.3.8-dist
+                ДеДЯcss
+                Да      bootstrap.min.css
+                Да      
+                ДдДЯjs
+                        bootstrap.bundle.min.js
+                        
