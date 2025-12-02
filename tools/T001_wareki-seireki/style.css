@@ -251,3 +251,32 @@ a, button, [role="button"], input[type="button"], input[type="submit"] {
 .modal-header .btn-close:hover {
   opacity: 1;
 }
+
+/* =====================================================
+   14) サポ箱タグ共通スタイル（機能カテゴリ／用途）
+   ===================================================== */
+
+/* 共通タグ基礎スタイル */
+.stb-tag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+}
+
+/* 機能カテゴリ（青系） */
+.stb-tag-category {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+/* 用途（緑〜ターコイズ系） */
+.stb-tag-usage {
+  background-color: #20c997;
+  color: #ffffff;
+}

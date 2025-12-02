@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ★ツール固有タイトル -->
+  <title>Support Tool Box | T003 ハンコジェネレータ</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ★ツール説明 -->
+  <meta name="description" content="入力した苗字から電子印鑑（ハンコ）画像を生成し、透過PNGとしてダウンロードできるコールセンター向けサポートツールです。">
+
+  <!-- 任意：作者情報（必要なければ削除してもOK） -->
+  <meta name="author" content="Support Tool Box（サポ箱）">
+
+  <!-- Favicon（T003 フォルダ内の favicon.svg を利用） -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="alternate icon" href="./favicon.svg">
+
+  <!-- Bootstrap CSS（ローカル配置を想定） -->
+  <!-- 例：tools/T003_hanko/libs/bootstrap-5.3.8-dist/css/bootstrap.min.css -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <!-- ページ共通スタイル -->
+  <style>
+    /* 右下 TOPへ戻るボタン（tool.js が生成する #backToTopBtn 用） */
+    #backToTopBtn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 1030;
+      display: none; /* スクロールしたら表示 */
+    }
+
+    /* サポ箱タグ共通スタイル（機能カテゴリ／用途） */
+    .stb-tag {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      white-space: nowrap;
+    }
+
+    /* 機能カテゴリ（青系） */
+    .stb-tag-category {
+      background-color: #0d6efd;
+      color: #ffffff;
+    }
+
+    /* 用途（緑〜ターコイズ系） */
+    .stb-tag-usage {
+      background-color: #20c997;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- TOPバー（top.js が中身を差し込む） -->
+  <div id="top-block"></div>
+
+  <!-- コンテンツ本体（content.js が一旦テンプレを差し込み、その後 tool.js で上書き） -->
+  <main id="content-block" class="pb-5"></main>
+
+  <!-- フッター（footer.js が中身を差し込む）。sticky footer のため margin-top:auto を付与 -->
+  <div id="footer-block" style="margin-top:auto;"></div>
+
+  <!-- Bootstrap JS（バンドル版） -->
+  <!-- 例：tools/T003_hanko/libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ビュー分割用 JS（ヘッダー／コンテンツ／フッター） -->
+  <script src="./top.js"></script>
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- ツール固有ロジック（ハンコ生成用） -->
+  <script src="./tool.js"></script>
+
+  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+</body>
+</html>

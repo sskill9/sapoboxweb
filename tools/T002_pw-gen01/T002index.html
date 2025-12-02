@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ★タイトル（テンプレ＋ツール名） -->
+  <title>Support Tool Box（サポ箱） - T002 パスワードジェネレーター</title>
+
+  <!-- ★説明文（SEO / SNS 用） -->
+  <meta name="description" content="コールセンターや事務センター向けのパスワードジェネレーター。1文字ごとの読み方（カナ）も自動表示・CSV出力可能。">
+
+  <!-- ★Favicon（今回追加した部分） -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Bootstrap CSS（ローカル） -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <!-- ページ共通のスタイル -->
+  <style>
+    /* TOPへ戻るボタン（content.js で使う） */
+    #backToTopBtn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 1030;
+      display: none;
+    }
+
+    /* サポ箱タグ共通スタイル（T002専用定義） */
+    .stb-tag {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      white-space: nowrap;
+    }
+
+    /* 機能カテゴリ（青系） */
+    .stb-tag-category {
+      background-color: #0d6efd;
+      color: #ffffff;
+    }
+
+    /* 用途（緑〜ターコイズ系） */
+    .stb-tag-usage {
+      background-color: #20c997;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- TOPバー -->
+  <div id="top-block"></div>
+
+  <!-- メインコンテンツ -->
+  <main id="content-block" class="pb-5"></main>
+
+  <!-- フッター -->
+  <div id="footer-block" style="margin-top:auto;"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 共通JS -->
+  <script src="./top.js"></script>
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- モーダル -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+
+</body>
+</html>
