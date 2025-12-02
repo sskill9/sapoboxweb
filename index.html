@@ -1,306 +1,65 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>サポ箱</title>
+  <meta charset="UTF-8">
+  <!-- ★ページ固有タイトル：サポ箱TOP用 -->
+  <!-- 例）Support Tool Box | サポ箱 TOP -->
+  <title>Support Tool Box | サポ箱 TOP</title>
 
-  <!-- ファビコン -->
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
-  <link rel="alternate icon" type="image/png" href="./assets/favicon/favicon_32.png" sizes="32x32">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- テーマカラー -->
-  <meta name="theme-color" content="#1e40af"/>
+  <!-- ★ページ説明：サポ箱全体の説明 -->
+  <meta name="description" content="コールセンターやコンタクトセンター業務を支援するためのWebツール集「Support Tool Box（サポ箱）」のトップページです。">
+  <meta name="author" content="Support Tool Box（サポ箱）">
 
-  <!-- Bootstrap -->
-  <link href="./assets/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- サイトCSS -->
-  <link href="./style.css" rel="stylesheet">
+  <!-- ファビコン（T000と同階層 & 同名想定） -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Bootstrap CSS（T000と同じパス構成） -->
+  <!-- 例：./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <!-- ページ共通スタイル -->
+  <style>
+    /* 右下 TOPへ戻るボタン（content.js が生成する #backToTopBtn 用） */
+    #backToTopBtn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 1030;
+      display: none; /* スクロールしたら表示 */
+    }
+  </style>
 </head>
-<body class="d-flex min-vh-100 flex-column">
 
-  <!-- ===== トップバー ===== -->
-  <nav class="navbar navbar-expand-lg sapo-navbar navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
-        <img src="./assets/logo/logo-stb-hybrid-full.svg" alt="サポ箱ロゴ" height="40" class="align-text-top" loading="eager">
-        <span>サポ箱</span>
-        <img src="./mascot.png" alt="マスコット"  height="22" class="align-text-top d-none d-sm-inline" loading="eager">
-      </a>
+<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="メニュー切替">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- TOPバー（top.js が中身を差し込む） -->
+  <!-- ★ページ名の表示文言は top.js 内で書き換え済み（サポ箱 TOP） -->
+  <div id="top-block"></div>
 
-      <div class="collapse navbar-collapse" id="topNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ツール一覧</a>
-            <ul class="dropdown-menu" id="navToolsMenu" aria-label="ツール一覧メニュー"></ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalHowto">使い方</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalChangelog">更新履歴</a></li>
-        </ul>
-        <div class="d-flex gap-2">
-          <a class="btn btn-light btn-sm" href="https://ss1.xrea.com/sskill9.s323.xrea.com/" target="_blank" rel="noopener">公開URL</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <!-- コンテンツ本体（content.js が中身を差し込む） -->
+  <!-- ★サポ箱TOP用の説明＆ツール一覧は content.js 側で定義 -->
+  <main id="content-block" class="pb-5"></main>
 
-  <!-- ===== メイン ===== -->
-  <main class="flex-grow-1">
-    <header class="page-hero">
-      <div class="container">
-        <h1 class="display-6 fw-bold mb-2">サポ箱</h1>
-        <p class="mb-0 text-secondary">コールセンター業務を支援する、ローカルでも動く小さなWebツール集。</p>
-      </div>
-    </header>
+  <!-- フッター（footer.js が中身を差し込む） -->
+  <!-- sticky footer のため margin-top:auto をここに付与 -->
+  <div id="footer-block" style="margin-top:auto;"></div>
 
-    <!-- ===== ツール一覧（1列表示） ===== -->
-    <section id="tools">
-      <div class="container">
-        <div class="row g-4" id="toolsRow">
-          <!-- tool.meta.json をもとにカードを自動生成 -->
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- Bootstrap JS（バンドル版） -->
+  <!-- 例：./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- ===== フッター ===== -->
-  <footer class="mt-auto py-2 sapo-footer">
-    <div class="container">
-      <div class="row gy-1 align-items-center">
-        <div class="col-12 col-lg-6">
-          <small class="text-white-75">&copy; <span id="y"></span> サポ箱 / sskill9</small>
-        </div>
-        <div class="col-12 col-lg-6 text-lg-end">
-          <a class="footer-link me-3" href="#" data-bs-toggle="modal" data-bs-target="#modalTos">利用規約</a>
-          <a class="footer-link me-3" href="#" data-bs-toggle="modal" data-bs-target="#modalPrivacy">プライバシー</a>
-          <a class="footer-link" href="#" id="scrollTopBtn">トップへ戻る</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- ビュー分割用 JS（ヘッダー／コンテンツ／フッター） -->
+  <script src="./top.js"></script>
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
 
-  <!-- ===== モーダル群 ===== -->
-  <div class="modal fade" id="modalHowto" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header"><h5 class="modal-title">使い方</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button></div>
-        <div class="modal-body" data-file="./howto.html"><div class="text-center py-4 text-secondary small">読み込み中…</div></div>
-        <div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal">閉じる</button></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="modalChangelog" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header"><h5 class="modal-title">更新履歴</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button></div>
-        <div class="modal-body" data-file="./changelog.html"><div class="text-center py-4 text-secondary small">読み込み中…</div></div>
-        <div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal">閉じる</button></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="modalTos" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header"><h5 class="modal-title">利用規約</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button></div>
-        <div class="modal-body"><p class="text-secondary small mb-0">準備中です。</p></div>
-        <div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal">閉じる</button></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="modalPrivacy" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header"><h5 class="modal-title">プライバシー</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button></div>
-        <div class="modal-body"><p class="text-secondary small mb-0">準備中です。</p></div>
-        <div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal">閉じる</button></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- JS（依存順序厳守） -->
-  <script src="./assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./fragments.js"></script>
-  <script src="./modal-loader.js"></script>
-  <script>
-    // 年表示
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // トップへ戻る
-    document.getElementById('scrollTopBtn').addEventListener('click', e => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // スクロールのスタイル制御
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.sapo-navbar');
-      const foot = document.querySelector('.sapo-footer');
-      const active = window.scrollY > 50;
-      nav?.classList.toggle('scrolled', active);
-      foot?.classList.toggle('scrolled', active);
-    });
-  </script>
-
-  <!-- ===== PRカード：テンプレ＋自動挿入（T001/T003/T007の直後） ===== -->
-  <template id="promoCardTpl">
-    <div class="col-12">
-      <div class="card shadow-soft promo-card tool-card h-100" aria-label="おすすめカード">
-        <div class="card-body d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
-          <div class="tool-info">
-            <span class="badge text-dark fw-semibold mb-2" style="background:#facc15;">PR</span>
-            <h2 class="h6 fw-bold mb-1">関連アイテムのご紹介</h2>
-            <p class="mb-3 small text-secondary">開発や運用に役立つアイテム。詳細はAmazonでご確認ください。</p>
-            <a href="https://amzn.to/4qcvUto"
-               target="_blank"
-               rel="sponsored nofollow noopener"
-               class="btn btn-sm btn-warning text-dark fw-semibold"
-               data-ref="ext">
-              Amazonで詳細を見る
-            </a>
-          </div>
-          <div class="tool-images d-flex align-items-center gap-2">
-            <div class="dummy-img small-thumb"></div>
-            <div class="dummy-img large-thumb"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-
-  <!-- ===== 一覧＆ナビ自動生成：tool.meta.json を1ファイルだけ読む ===== -->
-  <script>
-  (function() {
-    const REGISTRY_URL = './tool.meta.json';
-    const row = document.getElementById('toolsRow');
-    const navMenu = document.getElementById('navToolsMenu');
-
-    function createToolCard(tool) {
-      const useDummyThumb = !tool.thumbnail || tool.status !== 'stable';
-      const thumbs = useDummyThumb
-        ? `
-          <div class="dummy-img small-thumb"></div>
-          <div class="dummy-img large-thumb"></div>`
-        : `
-          <img src="${tool.thumbnail}" alt="${tool.name} サムネイル" class="small-thumb" loading="lazy">
-          <img src="${tool.thumbnail}" alt="${tool.name} サムネイル" class="large-thumb" loading="lazy">`;
-
-      const col = document.createElement('div');
-      col.className = 'col-12';
-      col.innerHTML = `
-        <div class="card shadow-soft tool-card h-100">
-          <div class="card-body d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
-            <div class="tool-info">
-              <span class="badge bg-primary fw-semibold mb-2">${tool.toolId}</span>
-              <h2 class="h5 fw-bold mb-2">${tool.name}</h2>
-              <p class="mb-3 small text-secondary">${tool.description ?? ''}</p>
-              <a class="btn btn-sm btn-outline-primary" href="./${tool.path}">開く</a>
-            </div>
-            <div class="tool-images d-flex align-items-center gap-2">
-              ${thumbs}
-            </div>
-          </div>
-        </div>
-      `;
-
-      // サムネイルが指定されていても壊れている場合はダミーに差し替え
-      col.querySelectorAll('.tool-images img').forEach(img => {
-        img.addEventListener('error', () => {
-          const wrap = img.parentElement;
-          const small = document.createElement('div'); small.className = 'dummy-img small-thumb';
-          const large = document.createElement('div'); large.className = 'dummy-img large-thumb';
-          wrap.replaceChildren(small, large);
-        }, { once: true });
-      });
-
-      return col;
-    }
-
-    function appendNavItem(tool) {
-      const li = document.createElement('li');
-      li.innerHTML = `<a class="dropdown-item" href="./${tool.path}">${tool.toolId}：${tool.name}</a>`;
-      navMenu.appendChild(li);
-    }
-
-    function renderFromRegistry(data) {
-      if (!data || !Array.isArray(data.tools)) return;
-
-      const visibleTools = data.tools
-        .filter(t => t.visible !== false)
-        .sort((a, b) => a.toolId.localeCompare(b.toolId));
-
-      visibleTools.forEach(tool => row.appendChild(createToolCard(tool)));
-      visibleTools.forEach(tool => appendNavItem(tool));
-
-      // 一覧とナビの描画完了を通知（PRカードはこれを待って挿入）
-      document.dispatchEvent(new CustomEvent('tools:rendered'));
-    }
-
-    fetch(REGISTRY_URL, { cache: 'no-cache' })
-      .then(res => { if (!res.ok) throw new Error('registry load failed'); return res.json(); })
-      .then(renderFromRegistry)
-      .catch(err => {
-        console.warn('tool.meta.json の読み込みに失敗しました:', err);
-        const col = document.createElement('div');
-        col.className = 'col-12';
-        col.innerHTML = `
-          <div class="alert alert-warning" role="alert">
-            ツール一覧を読み込めませんでした。リロードするか、公開サーバーでご確認ください。
-          </div>`;
-        row.appendChild(col);
-      });
-  })();
-  </script>
-
-  <!-- ===== PRカード自動配置（一覧描画完了後に挿入） ===== -->
-  <script>
-  (function() {
-    const ROW_SEL = '#tools .container .row.g-4';
-    const PROMO_SLOTS = [
-      { afterBadge: 'T001', id: 'pc-slot-01' },
-      { afterBadge: 'T003', id: 'pc-slot-02' },
-      { afterBadge: 'T007', id: 'pc-slot-03' },
-    ];
-    const tpl = document.getElementById('promoCardTpl');
-
-    function buildPromoNode(id) {
-      const node = tpl.content.firstElementChild.cloneNode(true);
-      node.id = id;
-      return node;
-    }
-    function getRow() { return document.querySelector(ROW_SEL); }
-    function findCardByBadge(row, badgeText) {
-      const cols = row ? Array.from(row.children) : [];
-      return cols.find(col => col.querySelector('.tool-info .badge')?.textContent.trim() === badgeText) || null;
-    }
-    function insertAfterBadge(badgeText, id) {
-      const row = getRow(); if (!row) return;
-      if (document.getElementById(id)) return;
-      const target = findCardByBadge(row, badgeText);
-      const promo = buildPromoNode(id);
-      if (target && target.nextSibling) row.insertBefore(promo, target.nextSibling);
-      else row.appendChild(promo);
-    }
-    function ensureAllPromos() { PROMO_SLOTS.forEach(s => insertAfterBadge(s.afterBadge, s.id)); }
-
-    // 一覧描画完了イベントを待ってから挿入（先頭に来る問題を防止）
-    document.addEventListener('tools:rendered', () => {
-      requestAnimationFrame(() => requestAnimationFrame(ensureAllPromos));
-    });
-
-    // 以後、動的変化があっても挿入を維持
-    const section = document.querySelector('section#tools');
-    if (section) {
-      const obs = new MutationObserver(() => ensureAllPromos());
-      obs.observe(section, { childList: true, subtree: true });
-    }
-  })();
-  </script>
+  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
+  <!-- ★T000ベースの共通モーダルをそのまま利用 -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
 </body>
 </html>

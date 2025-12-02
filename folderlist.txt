@@ -3,26 +3,45 @@
 C:.
 │  .gitattributes
 │  backup7z_ansi.bat
-│  changelog.html
 │  codex-init.patch
+│  content.js
+│  favicon.svg
 │  folderlist.txt
-│  fragments.js
-│  howto.html
+│  footer.js
 │  index.html
-│  logo.svg
-│  mascot.png
-│  modal-loader.js
-│  nav-tools.html
+│  modal-changelog.js
+│  modal-howto.js
+│  modal-links.js
+│  modal-terms.js
 │  README.txt
 │  style.css
 │  tool.meta.json
+│  top.js
 │  treefolderlist.bat
 │  
 ├─BK
-│      20251026152924.zip
-│      20251130024356.zip
-│      20251130135739.zip
-│      
+│  │  20251130184733.zip
+│  │  20251130193504.zip
+│  │  20251202012622.zip
+│  │  20251202101811.zip
+│  │  
+│  └─OLD
+│          changelog.html
+│          fragments.js
+│          howto.html
+│          logo.svg
+│          mascot.png
+│          modal-loader.js
+│          nav-tools.html
+│          
+├─libs
+│  └─bootstrap-5.3.8-dist
+│      ├─css
+│      │      bootstrap.min.css
+│      │      
+│      └─js
+│              bootstrap.bundle.min.js
+│              
 ├─test-hello
 │      hello.js
 │      index.html
@@ -40,6 +59,8 @@ C:.
     │          howto.html
     │          
     ├─T000_tp
+    │  │  20251130150731.zip
+    │  │  20251130193453.zip
     │  │  backup7z_ansi.bat
     │  │  content.js
     │  │  Download_zip.bat
@@ -49,6 +70,7 @@ C:.
     │  │  modal-howto.js
     │  │  modal-links.js
     │  │  modal-terms.js
+    │  │  sapobox_rule_No85_complete.md
     │  │  T000index.html
     │  │  top.js
     │  │  
@@ -74,41 +96,327 @@ C:.
     │          └─js
     │                  bootstrap.bundle.min.js
     │                  
-    └─T001_wareki-seireki
+    ├─T001_wareki-seireki
+    │  │  backup7z_ansi.bat
+    │  │  content.js
+    │  │  Download_zip.bat
+    │  │  favicon.svg
+    │  │  footer.js
+    │  │  modal-changelog.js
+    │  │  modal-howto.js
+    │  │  modal-links.js
+    │  │  modal-terms.js
+    │  │  style.css
+    │  │  T001.zip
+    │  │  T001index.html
+    │  │  tool.css
+    │  │  tool.js
+    │  │  top.js
+    │  │  
+    │  ├─BK
+    │  │  │  20251028003135.zip
+    │  │  │  20251028011139.zip
+    │  │  │  20251130162727.zip
+    │  │  │  20251130174151.zip
+    │  │  │  
+    │  │  └─OLD
+    │  │      │  footer.html
+    │  │      │  logo.svg
+    │  │      │  T001index - コピー.html
+    │  │      │  
+    │  │      └─icons
+    │  │              facebook.svg
+    │  │              x.svg
+    │  │              
+    │  └─libs
+    │      └─bootstrap-5.3.8-dist
+    │          ├─css
+    │          │      bootstrap.min.css
+    │          │      
+    │          └─js
+    │                  bootstrap.bundle.min.js
+    │                  
+    ├─T002_pw-gen01
+    │  │  backup7z_ansi.bat
+    │  │  content.js
+    │  │  Download_zip.bat
+    │  │  favicon.svg
+    │  │  footer.js
+    │  │  modal-changelog.js
+    │  │  modal-howto.js
+    │  │  modal-links.js
+    │  │  modal-terms.js
+    │  │  T002.zip
+    │  │  T002index.html
+    │  │  top.js
+    │  │  
+    │  ├─BK
+    │  │      20251130212122.zip
+    │  │      20251130230934.zip
+    │  │      
+    │  └─libs
+    │      └─bootstrap-5.3.8-dist
+    │          ├─css
+    │          │      bootstrap.min.css
+    │          │      
+    │          └─js
+    │                  bootstrap.bundle.min.js
+    │                  
+    ├─T003_hanko
+    │  │  20251130150731.zip
+    │  │  20251130193453.zip
+    │  │  backup7z_ansi.bat
+    │  │  content.js
+    │  │  Download_zip.bat
+    │  │  favicon.svg
+    │  │  footer.js
+    │  │  modal-changelog.js
+    │  │  modal-howto.js
+    │  │  modal-links.js
+    │  │  modal-terms.js
+    │  │  T003.zip
+    │  │  T003index.html
+    │  │  tool.js
+    │  │  top.js
+    │  │  
+    │  ├─BK
+    │  │  │  20251130024415.zip
+    │  │  │  
+    │  │  └─old
+    │  │      │  footer.html
+    │  │      │  logo.svg
+    │  │      │  style.css
+    │  │      │  tool.css
+    │  │      │  tool.js
+    │  │      │  
+    │  │      └─icons
+    │  │              facebook.svg
+    │  │              x.svg
+    │  │              
+    │  └─libs
+    │      └─bootstrap-5.3.8-dist
+    │          ├─css
+    │          │      bootstrap.min.css
+    │          │      
+    │          └─js
+    │                  bootstrap.bundle.min.js
+    │                  
+    └─T004_OCR01
+        │  20251130150731.zip
+        │  20251130193453.zip
         │  backup7z_ansi.bat
+        │  content.js
         │  Download_zip.bat
         │  favicon.svg
-        │  footer.html
-        │  logo.svg
-        │  style.css
-        │  T001.zip
-        │  T001index - コピー.html
-        │  T001index.html
-        │  tool.css
-        │  tool.js
+        │  footer.js
+        │  modal-changelog.js
+        │  modal-howto.js
+        │  modal-links.js
+        │  modal-terms.js
+        │  T004index.html
+        │  top.js
         │  
         ├─BK
-        │      20251024032444.zip
-        │      20251024040031.zip
-        │      20251026070940.zip
-        │      20251026082522.zip
-        │      20251026141532.zip
-        │      20251026143047.zip
-        │      20251026151319.zip
-        │      20251026160046.zip
-        │      20251026174729.zip
-        │      20251028003135.zip
-        │      20251028011139.zip
-        │      
-        ├─icons
-        │      facebook.svg
-        │      x.svg
-        │      
+        │  │  20251130024415.zip
+        │  │  
+        │  ├─old
+        │  │  │  footer.html
+        │  │  │  logo.svg
+        │  │  │  style.css
+        │  │  │  tool.css
+        │  │  │  tool.js
+        │  │  │  
+        │  │  └─icons
+        │  │          facebook.svg
+        │  │          x.svg
+        │  │          
+        │  └─tesseract.js-5.0.4
+        │      │  .eslintrc
+        │      │  .gitignore
+        │      │  .gitpod.Dockerfile
+        │      │  .gitpod.yml
+        │      │  .npmignore
+        │      │  babel.config.json
+        │      │  LICENSE.md
+        │      │  package-lock.json
+        │      │  package.json
+        │      │  README.md
+        │      │  
+        │      ├─.github
+        │      │  │  FUNDING.yml
+        │      │  │  SECURITY.md
+        │      │  │  
+        │      │  ├─ISSUE_TEMPLATE
+        │      │  │      bug_report.md
+        │      │  │      feature_request.md
+        │      │  │      
+        │      │  └─workflows
+        │      │          codeql-analysis.yml
+        │      │          node.js.yml
+        │      │          
+        │      ├─benchmarks
+        │      │  │  readme.md
+        │      │  │  
+        │      │  ├─browser
+        │      │  │      auto-rotate-benchmark.html
+        │      │  │      speed-benchmark.html
+        │      │  │      
+        │      │  ├─data
+        │      │  │      meditations.jpg
+        │      │  │      testocr.png
+        │      │  │      tyger.jpg
+        │      │  │      
+        │      │  └─node
+        │      │          speed-benchmark.js
+        │      │          
+        │      ├─docs
+        │      │  │  api.md
+        │      │  │  examples.md
+        │      │  │  faq.md
+        │      │  │  image-format.md
+        │      │  │  local-installation.md
+        │      │  │  performance.md
+        │      │  │  tesseract_lang_list.md
+        │      │  │  workers_vs_schedulers.md
+        │      │  │  
+        │      │  └─images
+        │      │          demo.gif
+        │      │          tesseract.png
+        │      │          tesseract_dark.png
+        │      │          video-demo.gif
+        │      │          
+        │      ├─examples
+        │      │  ├─browser
+        │      │  │      basic-efficient.html
+        │      │  │      basic-scheduler.html
+        │      │  │      download-pdf.html
+        │      │  │      image-processing.html
+        │      │  │      
+        │      │  └─node
+        │      │          download-pdf.js
+        │      │          image-processing.js
+        │      │          recognize.js
+        │      │          scheduler.js
+        │      │          
+        │      ├─scripts
+        │      │      .eslintrc
+        │      │      rollup.esm.mjs
+        │      │      server.js
+        │      │      test-helper.js
+        │      │      webpack.config.common.js
+        │      │      webpack.config.prod.js
+        │      │      
+        │      ├─src
+        │      │  │  createJob.js
+        │      │  │  createScheduler.js
+        │      │  │  createWorker.js
+        │      │  │  index.d.ts
+        │      │  │  index.js
+        │      │  │  Tesseract.js
+        │      │  │  
+        │      │  ├─constants
+        │      │  │      defaultOptions.js
+        │      │  │      imageType.js
+        │      │  │      languages.js
+        │      │  │      OEM.js
+        │      │  │      PSM.js
+        │      │  │      
+        │      │  ├─utils
+        │      │  │      circularize.js
+        │      │  │      getEnvironment.js
+        │      │  │      getId.js
+        │      │  │      log.js
+        │      │  │      resolvePaths.js
+        │      │  │      
+        │      │  ├─worker
+        │      │  │  ├─browser
+        │      │  │  │      defaultOptions.js
+        │      │  │  │      index.js
+        │      │  │  │      loadImage.js
+        │      │  │  │      onMessage.js
+        │      │  │  │      send.js
+        │      │  │  │      spawnWorker.js
+        │      │  │  │      terminateWorker.js
+        │      │  │  │      
+        │      │  │  └─node
+        │      │  │          defaultOptions.js
+        │      │  │          index.js
+        │      │  │          loadImage.js
+        │      │  │          onMessage.js
+        │      │  │          send.js
+        │      │  │          spawnWorker.js
+        │      │  │          terminateWorker.js
+        │      │  │          
+        │      │  └─worker-script
+        │      │      │  index.js
+        │      │      │  
+        │      │      ├─browser
+        │      │      │      cache.js
+        │      │      │      getCore.js
+        │      │      │      gunzip.js
+        │      │      │      index.js
+        │      │      │      
+        │      │      ├─constants
+        │      │      │      defaultOutput.js
+        │      │      │      defaultParams.js
+        │      │      │      
+        │      │      ├─node
+        │      │      │      cache.js
+        │      │      │      getCore.js
+        │      │      │      gunzip.js
+        │      │      │      index.js
+        │      │      │      
+        │      │      └─utils
+        │      │              arrayBufferToBase64.js
+        │      │              dump.js
+        │      │              setImage.js
+        │      │              
+        │      └─tests
+        │          │  .eslintrc
+        │          │  constants.js
+        │          │  detect.test.html
+        │          │  detect.test.js
+        │          │  FS.test.html
+        │          │  FS.test.js
+        │          │  recognize.test.html
+        │          │  recognize.test.js
+        │          │  scheduler.test.html
+        │          │  scheduler.test.js
+        │          │  
+        │          └─assets
+        │              ├─images
+        │              │      bill.png
+        │              │      chinese.png
+        │              │      cosmic.png
+        │              │      simple-180.jpg
+        │              │      simple-270.jpg
+        │              │      simple-90.jpg
+        │              │      simple.bmp
+        │              │      simple.gif
+        │              │      simple.jpg
+        │              │      simple.pbm
+        │              │      simple.png
+        │              │      simple.webp
+        │              │      testocr.jpg
+        │              │      testocr.pbm
+        │              │      testocr.png
+        │              │      
+        │              └─traineddata
+        │                      chi_tra.traineddata
+        │                      eng.traineddata
+        │                      osd.traineddata
+        │                      
         └─libs
-            └─bootstrap-5.3.8-dist
-                ├─css
-                │      bootstrap.min.css
-                │      
-                └─js
-                        bootstrap.bundle.min.js
-                        
+            │  jpn.traineddata
+            │  
+            ├─bootstrap-5.3.8-dist
+            │  ├─css
+            │  │      bootstrap.min.css
+            │  │      
+            │  └─js
+            │          bootstrap.bundle.min.js
+            │          
+            └─tesseract
+                    tesseract.min.js
+                    worker.min.js
+                    

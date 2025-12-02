@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1e40af; }
+      .txt { fill: #ffffff; font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans", "DejaVu Sans", Arial, sans-serif; font-weight: 800; }
+    </style>
+  </defs>
+  <circle class="bg" cx="256" cy="256" r="224"/>
+  <text class="txt" x="50%" y="57%" font-size="320" text-anchor="middle" dominant-baseline="middle">S</text>
+</svg>
