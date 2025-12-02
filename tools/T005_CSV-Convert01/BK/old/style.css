@@ -1,0 +1,123 @@
+/*
+  File: style.css
+  Template: Support Tool Box / T000
+  Author: {TOOL_AUTHOR}
+  Version: {TOOL_VERSION}
+  Date: {TOOL_DATE} (JST)
+  Notes:
+    - 全体の青系テーマと基本レイアウト・アクセシビリティを提供します。
+    - 重要: フッターに法令リンク起点を必ず保持（No.77）。
+*/
+
+/* Root Colors */
+:root {
+  --stb-blue-900: #0b2a5b;
+  --stb-blue-800: #123a7a;
+  --stb-blue-700: #1a4b9e;
+  --stb-blue-600: #1f5bbf;
+  --stb-blue-500: #2b6fd9;
+  --stb-accent:  #35b0ff;
+  --stb-bg:      #f6f8fb;
+  --stb-text:    #1e293b;
+}
+
+/* Base */
+html, body {
+  height: 100%;
+}
+body {
+  background: var(--stb-bg);
+  color: var(--stb-text);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.stb-navbar {
+  background: linear-gradient(90deg, var(--stb-blue-900), var(--stb-blue-700));
+}
+.stb-navbar .navbar-brand .brand-text {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.stb-navbar .navbar-toggler {
+  border-color: rgba(255,255,255,.35);
+}
+.stb-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Tool Badge */
+.stb-badge-id {
+  background: var(--stb-accent);
+  color: #00213d;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Buttons */
+.btn-accent {
+  background: var(--stb-accent);
+  color: #00213d;
+  border: 0;
+}
+.btn-accent:hover {
+  opacity: 0.9;
+}
+
+/* Hero */
+.stb-hero {
+  background: linear-gradient(180deg, var(--stb-blue-800), var(--stb-blue-700));
+}
+.stb-hero-inner {
+  background: linear-gradient(90deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+/* Card */
+.card-header {
+  background: #fff;
+}
+.card-footer {
+  background: #fff;
+}
+
+/* Modal */
+.stb-modal-header {
+  background: var(--stb-blue-700);
+  color: #fff;
+}
+
+/* Footer */
+.stb-footer {
+  background: linear-gradient(90deg, var(--stb-blue-900), var(--stb-blue-800));
+  color: #cfe6ff;
+}
+.stb-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.stb-footer a:hover {
+  text-decoration: underline;
+}
+.stb-footer .icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  filter: invert(1); /* 白化 */
+}
+
+/* Forms */
+.form-label {
+  font-weight: 600;
+}
+input[readonly] {
+  background: #f9fbff;
+}
+
+/* Utilities */
+.shadow-soft {
+  box-shadow: 0 .25rem .75rem rgba(0,0,0,.06);
+}

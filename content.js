@@ -167,6 +167,37 @@
         </div>
       </div>
 
+      <!-- ツールカード：T005 CSV 文字コード判定＆変換ツール -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header bg-primary-subtle fw-bold">
+            T005 CSV 文字コード判定＆変換ツール
+          </div>
+          <div class="card-body d-flex flex-column">
+            <!-- タグ：機能カテゴリ＋用途（T005側に合わせて CSVツール＋汎用ツール） -->
+            <div class="mb-2">
+              <span class="badge rounded-pill fw-semibold me-1"
+                    style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+                CSVツール
+              </span>
+              <span class="badge rounded-pill fw-semibold"
+                    style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+                汎用ツール
+              </span>
+            </div>
+            <p class="card-text small mb-3">
+              CSVファイルの文字コード（UTF-8／UTF-8(BOM)／Shift_JIS）を判定し、
+              ワンクリックで目的の文字コードへ変換してダウンロードできるローカル専用ツールです。
+            </p>
+            <div class="mt-auto">
+              <a href="./tools/T005_CSV-Convert01/T005index.html" class="btn btn-primary btn-sm w-100">
+                開く
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

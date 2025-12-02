@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- ★ツール固有タイトル：ここを書き換えてください
+       例）Support Tool Box | T001 和暦↔西暦チェッカー
+  -->
+  <title>Support Tool Box | T005 CSV 文字コード判定＆変換ツール</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ★ツール説明：ここを書き換えてください
+       ・検索結果やSNSのカードなどに表示される想定の説明文です。
+       ・各ツールごとに、1〜2文で要約を書くことをおすすめします。
+  -->
+  <meta name="description" content="CSV ファイルの文字コード（UTF-8 / UTF-8(BOM) / Shift_JIS）を判定し、ワンクリックで変換・ダウンロードできるローカル専用ツールです。">
+
+  <!-- 任意：作者情報（必要なければ削除してもOK） -->
+  <meta name="author" content="Support Tool Box（サポ箱）">
+
+  <!-- 同階層の favicon.svg を利用 -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <!-- Bootstrap CSS（ローカル配置を想定） -->
+  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/css/bootstrap.min.css -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <!-- ページ共通スタイル -->
+  <style>
+    /* 右下 TOPへ戻るボタン（content.js が生成する #backToTopBtn 用） */
+    #backToTopBtn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 1030;
+      display: none; /* スクロールしたら表示 */
+    }
+  </style>
+</head>
+
+<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- TOPバー（top.js が中身を差し込む） -->
+  <!-- ★ツール名の表示文言は top.js 内で書き換えてください -->
+  <div id="top-block"></div>
+
+  <!-- コンテンツ本体（content.js が中身を差し込む） -->
+  <!-- ★ツール固有の説明・入力フォームなどは content.js 側で編集します -->
+  <main id="content-block" class="pb-5"></main>
+
+  <!-- フッター（footer.js が中身を差し込む） -->
+  <!-- sticky footer のため margin-top:auto をここに付与 -->
+  <div id="footer-block" style="margin-top:auto;"></div>
+
+  <!-- Bootstrap JS（バンドル版） -->
+  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ★文字コード変換ライブラリ（encoding-japanese の min 版）
+       ファイル名が encoding.min.js で保存してある場合は、下記のパスのままでOKです。
+       もし encoding-japanese.min.js という名前にした場合は、そのファイル名に合わせてください。
+  -->
+  <script src="./libs/encoding.min.js"></script>
+
+  <!-- ★SJIS 変換用ヘルパー（window.csvEncodingToolConvertToSJIS を定義） -->
+  <script src="./encoding-helper.js"></script>
+
+  <!-- ビュー分割用 JS（ヘッダー／コンテンツ／フッター） -->
+  <script src="./top.js"></script>
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
+  <!-- ★各ツールごとに中身のテキストを書き換えて使います -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+</body>
+</html>
