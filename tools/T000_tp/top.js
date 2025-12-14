@@ -88,7 +88,7 @@
                必要に応じて href のファイル名を書き換えてください。
           -->
           <a class="btn btn-outline-light btn-sm"
-             href="./T000.zip"
+             href="https://ss1.xrea.com/sskill9.s323.xrea.com/tools/T000_tp/T000.zip"
              download
              aria-label="このツール一式をZIPでダウンロード">
             ダウンロード

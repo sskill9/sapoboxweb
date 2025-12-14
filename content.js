@@ -1,7 +1,7 @@
 // content.js — CONTENTブロック（サポ箱TOP本体＋TOPへ戻るボタン）
 //
 // ・サポ箱TOPの概要表示
-// ・ツール一覧カード（T001 / T002 / T003 / T004）
+// ・ツール一覧カード（T001 / T002 / T003 / T004 / T005 / T006）
 // ・お知らせエリア
 // ・右下「TOPへ戻る」ボタン
 
@@ -16,7 +16,6 @@
   <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-3">
 
     <div class="mb-2 mb-md-0">
-      <!-- タグをツール側と近い見た目に調整 -->
       <span class="badge rounded-pill fw-semibold me-2"
             style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
         ツール集
@@ -50,7 +49,6 @@
             T001 和暦↔西暦チェッカー
           </div>
           <div class="card-body d-flex flex-column">
-            <!-- タグ：機能カテゴリ＋用途（ツール側に合わせた色と形） -->
             <div class="mb-2">
               <span class="badge rounded-pill fw-semibold me-1"
                     style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
@@ -81,7 +79,6 @@
             T002 パスワードジェネレーター
           </div>
           <div class="card-body d-flex flex-column">
-            <!-- タグ：機能カテゴリ＋用途 -->
             <div class="mb-2">
               <span class="badge rounded-pill fw-semibold me-1"
                     style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
@@ -112,7 +109,6 @@
             T003 ハンコジェネレータ
           </div>
           <div class="card-body d-flex flex-column">
-            <!-- タグ：機能カテゴリ＋用途 -->
             <div class="mb-2">
               <span class="badge rounded-pill fw-semibold me-1"
                     style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
@@ -144,7 +140,6 @@
             T004 簡易OCR
           </div>
           <div class="card-body d-flex flex-column">
-            <!-- タグ：機能カテゴリ＋用途 -->
             <div class="mb-2">
               <span class="badge rounded-pill fw-semibold me-1"
                     style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
@@ -174,7 +169,6 @@
             T005 CSV 文字コード判定＆変換ツール
           </div>
           <div class="card-body d-flex flex-column">
-            <!-- タグ：機能カテゴリ＋用途（T005側に合わせて CSVツール＋汎用ツール） -->
             <div class="mb-2">
               <span class="badge rounded-pill fw-semibold me-1"
                     style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
@@ -191,6 +185,38 @@
             </p>
             <div class="mt-auto">
               <a href="./tools/T005_CSV-Convert01/T005index.html" class="btn btn-primary btn-sm w-100">
+                開く
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ツールカード：T006 ファイル暗号化／復号化 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header bg-primary-subtle fw-bold">
+            T006 ファイル暗号化／復号化
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2">
+              <span class="badge rounded-pill fw-semibold me-1"
+                    style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+                暗号化
+              </span>
+              <span class="badge rounded-pill fw-semibold"
+                    style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+                汎用ツール
+              </span>
+            </div>
+            <p class="card-text small mb-3">
+              ファイルをパスワードで暗号化・復号化できるローカル専用ツールです。
+              ブラウザ標準の Web Crypto API を使用し、PBKDF2（SHA-256）による鍵導出と
+              AES-GCM による暗号化を行っています。
+              暗号化ソフトのインストールが許可されない環境で有効です。
+            </p>
+            <div class="mt-auto">
+              <a href="./tools/T006_angou01/T006index.html" class="btn btn-primary btn-sm w-100">
                 開く
               </a>
             </div>

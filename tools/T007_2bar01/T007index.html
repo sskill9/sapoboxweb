@@ -1,0 +1,85 @@
+<!-- ===== DOCTYPEブロック ===== -->
+<!DOCTYPE html>
+<html lang="ja">
+<!-- ===== DOCTYPEブロックここまで ===== -->
+
+<!-- ===== HEADブロック ===== -->
+<head>
+  <meta charset="UTF-8">
+  <!-- ★ツール固有タイトル：ここを書き換えてください
+       例）Support Tool Box | T001 和暦↔西暦チェッカー
+  -->
+  <title>Support Tool Box | 2次元QRコード生成</title>
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ★ツール説明：ここを書き換えてください
+       ・検索結果やSNSのカードなどに表示される想定の説明文です。
+       ・各ツールごとに、1〜2文で要約を書くことをおすすめします。
+  -->
+  <meta name="description" content="URLからQRコード（PNG）を生成します。誤り訂正レベルとサイズを指定して出力できます。">
+
+  <!-- 任意：作者情報（必要なければ削除してもOK） -->
+  <meta name="author" content="Support Tool Box（サポ箱）">
+
+  <!-- Bootstrap CSS（ローカル配置を想定） -->
+  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/css/bootstrap.min.css -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <!-- ページ共通スタイル -->
+  <style>
+    /* 右下 TOPへ戻るボタン（content.js が生成する #backToTopBtn 用） */
+    #backToTopBtn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 1030;
+      display: none; /* スクロールしたら表示 */
+    }
+  </style>
+</head>
+<!-- ===== HEADブロックここまで ===== -->
+
+<!-- ===== BODYブロック ===== -->
+<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- TOPバー（top.js が中身を差し込む） -->
+  <!-- ★ツール名の表示文言は top.js 内で書き換えてください -->
+  <div id="top-block"></div>
+
+  <!-- コンテンツ本体（content.js が中身を差し込む） -->
+  <!-- ★ツール固有の説明・入力フォームなどは content.js 側で編集します -->
+  <main id="content-block" class="pb-5"></main>
+
+  <!-- フッター（footer.js が中身を差し込む） -->
+  <!-- sticky footer のため margin-top:auto をここに付与 -->
+  <div id="footer-block" style="margin-top:auto;"></div>
+
+  <!-- ===== SCRIPTブロック ===== -->
+  <!-- Bootstrap JS（バンドル版） -->
+  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- QRコード生成ライブラリ（ローカル配置：libs 直下） -->
+  <!-- content.js から QRCode を使用するため、content.js より前に読み込みます -->
+  <script src="./libs/qrcode.min.js"></script>
+
+  <!-- ビュー分割用 JS（ヘッダー／コンテンツ／フッター） -->
+  <script src="./top.js"></script>
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
+  <!-- ★各ツールごとに中身のテキストを書き換えて使います -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+  <!-- ===== SCRIPTブロックここまで ===== -->
+
+</body>
+<!-- ===== BODYブロックここまで ===== -->
+</html>

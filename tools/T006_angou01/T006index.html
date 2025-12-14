@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ★ツール固有タイトル -->
+  <title>Support Tool Box | T006 ファイル暗号化／復号化（.angou）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ★ツール説明 -->
+  <meta name="description" content="ブラウザ内でファイルを暗号化して .angou を作成／復号できます。サーバー送信なしのローカル動作ツールです。">
+
+  <!-- favicon（同階層の favicon.svg を使用） -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Bootstrap（ローカル） -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <!-- このツールフォルダ直下の追加CSSがある場合（無ければ残してもOK） -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="page-top">
+
+  <!-- TOPブロック（top.js がここへ差し込み） -->
+  <div id="top-block"></div>
+
+  <!-- CONTENTブロック（content.ui.js がここへ差し込み） -->
+  <main id="content-block"></main>
+
+  <!-- FOOTERブロック（footer.js がここへ差し込み） -->
+  <div id="footer-block"></div>
+
+  <!-- モーダル類（modal-*.js がここへ差し込みたい場合に使える領域：無くても動く設計） -->
+  <div id="modal-block"></div>
+
+  <!-- Bootstrap JS（ローカル）※ モーダル等に必須 -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ビュー分割用 JS（ヘッダー／ツールUI／ロジック／イベント／フッター） -->
+  <script src="./top.js"></script>
+  <script src="./tool.js"></script>
+  <script src="./content.ui.js"></script>
+  <script src="./content.logic.js"></script>
+  <script src="./content.events.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+
+</body>
+</html>

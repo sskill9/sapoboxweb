@@ -1,7 +1,8 @@
 フォルダー パスの一覧:  ボリューム Windows
-ボリューム シリアル番号は 482E-97BB です
+ボリューム シリアル番号は 687F-0312 です
 C:.
 │  .gitattributes
+│  20251214134351.zip
 │  backup7z_ansi.bat
 │  codex-init.patch
 │  content.js
@@ -199,9 +200,6 @@ C:.
     │                  bootstrap.bundle.min.js
     │                  
     ├─T004_OCR01
-    │  │  20251130150731.zip
-    │  │  20251130193453.zip
-    │  │  20251202113152.zip
     │  │  backup7z_ansi.bat
     │  │  content.js
     │  │  Download_zip.bat
@@ -216,195 +214,8 @@ C:.
     │  │  top.js
     │  │  
     │  ├─BK
-    │  │  │  20251130024415.zip
-    │  │  │  
-    │  │  ├─old
-    │  │  │  │  footer.html
-    │  │  │  │  logo.svg
-    │  │  │  │  style.css
-    │  │  │  │  tool.css
-    │  │  │  │  tool.js
-    │  │  │  │  
-    │  │  │  └─icons
-    │  │  │          facebook.svg
-    │  │  │          x.svg
-    │  │  │          
-    │  │  └─tesseract.js-5.0.4
-    │  │      │  .eslintrc
-    │  │      │  .gitignore
-    │  │      │  .gitpod.Dockerfile
-    │  │      │  .gitpod.yml
-    │  │      │  .npmignore
-    │  │      │  babel.config.json
-    │  │      │  LICENSE.md
-    │  │      │  package-lock.json
-    │  │      │  package.json
-    │  │      │  README.md
-    │  │      │  
-    │  │      ├─.github
-    │  │      │  │  FUNDING.yml
-    │  │      │  │  SECURITY.md
-    │  │      │  │  
-    │  │      │  ├─ISSUE_TEMPLATE
-    │  │      │  │      bug_report.md
-    │  │      │  │      feature_request.md
-    │  │      │  │      
-    │  │      │  └─workflows
-    │  │      │          codeql-analysis.yml
-    │  │      │          node.js.yml
-    │  │      │          
-    │  │      ├─benchmarks
-    │  │      │  │  readme.md
-    │  │      │  │  
-    │  │      │  ├─browser
-    │  │      │  │      auto-rotate-benchmark.html
-    │  │      │  │      speed-benchmark.html
-    │  │      │  │      
-    │  │      │  ├─data
-    │  │      │  │      meditations.jpg
-    │  │      │  │      testocr.png
-    │  │      │  │      tyger.jpg
-    │  │      │  │      
-    │  │      │  └─node
-    │  │      │          speed-benchmark.js
-    │  │      │          
-    │  │      ├─docs
-    │  │      │  │  api.md
-    │  │      │  │  examples.md
-    │  │      │  │  faq.md
-    │  │      │  │  image-format.md
-    │  │      │  │  local-installation.md
-    │  │      │  │  performance.md
-    │  │      │  │  tesseract_lang_list.md
-    │  │      │  │  workers_vs_schedulers.md
-    │  │      │  │  
-    │  │      │  └─images
-    │  │      │          demo.gif
-    │  │      │          tesseract.png
-    │  │      │          tesseract_dark.png
-    │  │      │          video-demo.gif
-    │  │      │          
-    │  │      ├─examples
-    │  │      │  ├─browser
-    │  │      │  │      basic-efficient.html
-    │  │      │  │      basic-scheduler.html
-    │  │      │  │      download-pdf.html
-    │  │      │  │      image-processing.html
-    │  │      │  │      
-    │  │      │  └─node
-    │  │      │          download-pdf.js
-    │  │      │          image-processing.js
-    │  │      │          recognize.js
-    │  │      │          scheduler.js
-    │  │      │          
-    │  │      ├─scripts
-    │  │      │      .eslintrc
-    │  │      │      rollup.esm.mjs
-    │  │      │      server.js
-    │  │      │      test-helper.js
-    │  │      │      webpack.config.common.js
-    │  │      │      webpack.config.prod.js
-    │  │      │      
-    │  │      ├─src
-    │  │      │  │  createJob.js
-    │  │      │  │  createScheduler.js
-    │  │      │  │  createWorker.js
-    │  │      │  │  index.d.ts
-    │  │      │  │  index.js
-    │  │      │  │  Tesseract.js
-    │  │      │  │  
-    │  │      │  ├─constants
-    │  │      │  │      defaultOptions.js
-    │  │      │  │      imageType.js
-    │  │      │  │      languages.js
-    │  │      │  │      OEM.js
-    │  │      │  │      PSM.js
-    │  │      │  │      
-    │  │      │  ├─utils
-    │  │      │  │      circularize.js
-    │  │      │  │      getEnvironment.js
-    │  │      │  │      getId.js
-    │  │      │  │      log.js
-    │  │      │  │      resolvePaths.js
-    │  │      │  │      
-    │  │      │  ├─worker
-    │  │      │  │  ├─browser
-    │  │      │  │  │      defaultOptions.js
-    │  │      │  │  │      index.js
-    │  │      │  │  │      loadImage.js
-    │  │      │  │  │      onMessage.js
-    │  │      │  │  │      send.js
-    │  │      │  │  │      spawnWorker.js
-    │  │      │  │  │      terminateWorker.js
-    │  │      │  │  │      
-    │  │      │  │  └─node
-    │  │      │  │          defaultOptions.js
-    │  │      │  │          index.js
-    │  │      │  │          loadImage.js
-    │  │      │  │          onMessage.js
-    │  │      │  │          send.js
-    │  │      │  │          spawnWorker.js
-    │  │      │  │          terminateWorker.js
-    │  │      │  │          
-    │  │      │  └─worker-script
-    │  │      │      │  index.js
-    │  │      │      │  
-    │  │      │      ├─browser
-    │  │      │      │      cache.js
-    │  │      │      │      getCore.js
-    │  │      │      │      gunzip.js
-    │  │      │      │      index.js
-    │  │      │      │      
-    │  │      │      ├─constants
-    │  │      │      │      defaultOutput.js
-    │  │      │      │      defaultParams.js
-    │  │      │      │      
-    │  │      │      ├─node
-    │  │      │      │      cache.js
-    │  │      │      │      getCore.js
-    │  │      │      │      gunzip.js
-    │  │      │      │      index.js
-    │  │      │      │      
-    │  │      │      └─utils
-    │  │      │              arrayBufferToBase64.js
-    │  │      │              dump.js
-    │  │      │              setImage.js
-    │  │      │              
-    │  │      └─tests
-    │  │          │  .eslintrc
-    │  │          │  constants.js
-    │  │          │  detect.test.html
-    │  │          │  detect.test.js
-    │  │          │  FS.test.html
-    │  │          │  FS.test.js
-    │  │          │  recognize.test.html
-    │  │          │  recognize.test.js
-    │  │          │  scheduler.test.html
-    │  │          │  scheduler.test.js
-    │  │          │  
-    │  │          └─assets
-    │  │              ├─images
-    │  │              │      bill.png
-    │  │              │      chinese.png
-    │  │              │      cosmic.png
-    │  │              │      simple-180.jpg
-    │  │              │      simple-270.jpg
-    │  │              │      simple-90.jpg
-    │  │              │      simple.bmp
-    │  │              │      simple.gif
-    │  │              │      simple.jpg
-    │  │              │      simple.pbm
-    │  │              │      simple.png
-    │  │              │      simple.webp
-    │  │              │      testocr.jpg
-    │  │              │      testocr.pbm
-    │  │              │      testocr.png
-    │  │              │      
-    │  │              └─traineddata
-    │  │                      chi_tra.traineddata
-    │  │                      eng.traineddata
-    │  │                      osd.traineddata
-    │  │                      
+    │  │      20251202113152.zip
+    │  │      
     │  └─libs
     │      │  jpn.traineddata
     │      │  
@@ -419,13 +230,70 @@ C:.
     │              tesseract.min.js
     │              worker.min.js
     │              
-    └─T005_CSV-Convert01
-        │  20251202113516.zip
+    ├─T005_CSV-Convert01
+    │  │  backup7z_ansi.bat
+    │  │  content.js
+    │  │  csv_tool_spec.md
+    │  │  Download_zip.bat
+    │  │  encoding-helper.js
+    │  │  favicon.svg
+    │  │  footer.js
+    │  │  modal-changelog.js
+    │  │  modal-howto.js
+    │  │  modal-links.js
+    │  │  modal-terms.js
+    │  │  sapobox_rule_No85_complete.md
+    │  │  T005.zip
+    │  │  T005index.html
+    │  │  top.js
+    │  │  
+    │  ├─BK
+    │  │      20251214134520.zip
+    │  │      
+    │  └─libs
+    │      │  encoding.min.js
+    │      │  
+    │      └─bootstrap-5.3.8-dist
+    │          ├─css
+    │          │      bootstrap.min.css
+    │          │      
+    │          └─js
+    │                  bootstrap.bundle.min.js
+    │                  
+    ├─T006_angou01
+    │  │  backup7z_ansi.bat
+    │  │  content.events.js
+    │  │  content.logic.js
+    │  │  content.ui.js
+    │  │  Download_zip.bat
+    │  │  favicon.svg
+    │  │  footer.js
+    │  │  modal-changelog.js
+    │  │  modal-howto.js
+    │  │  modal-links.js
+    │  │  modal-terms.js
+    │  │  sapobox_rule_No85_complete.md
+    │  │  style.css
+    │  │  T006.zip
+    │  │  T006index.html
+    │  │  tool.js
+    │  │  top.js
+    │  │  
+    │  ├─BK
+    │  │      20251214040308.zip
+    │  │      
+    │  └─libs
+    │      └─bootstrap-5.3.8-dist
+    │          ├─css
+    │          │      bootstrap.min.css
+    │          │      
+    │          └─js
+    │                  bootstrap.bundle.min.js
+    │                  
+    └─T007_2bar01
         │  backup7z_ansi.bat
         │  content.js
-        │  csv_tool_spec.md
         │  Download_zip.bat
-        │  encoding-helper.js
         │  favicon.svg
         │  footer.js
         │  modal-changelog.js
@@ -433,26 +301,11 @@ C:.
         │  modal-links.js
         │  modal-terms.js
         │  sapobox_rule_No85_complete.md
-        │  T005index.html
+        │  T007index.html
         │  top.js
         │  
         ├─BK
-        │  │  20251130024415.zip
-        │  │  
-        │  └─old
-        │      │  footer.html
-        │      │  logo.svg
-        │      │  style.css
-        │      │  tool.css
-        │      │  tool.js
-        │      │  
-        │      └─icons
-        │              facebook.svg
-        │              x.svg
-        │              
         └─libs
-            │  encoding.min.js
-            │  
             └─bootstrap-5.3.8-dist
                 ├─css
                 │      bootstrap.min.css
