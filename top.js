@@ -1,4 +1,7 @@
 // top.js — TOPブロック（ナビバー：影付き＋ボタン風メニュー）
+// Support Tool Box サイトTOP用
+// ・レスポンシブ対応：PCは1行表示、スマホは2行表示
+
 (function () {
   var topEl = document.getElementById("top-block");
   if (!topEl) return;
@@ -12,6 +15,7 @@
       <a href="./index.html"
          class="navbar-brand d-flex align-items-center me-3"
          aria-label="Support Tool Box（サポ箱）TOPページへ">
+
         <!-- SVGロゴ -->
         <span class="me-2">
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -31,12 +35,21 @@
           </svg>
         </span>
 
-        <!-- サイト名 + ページ名 -->
-        <span class="fw-bold">
+        <!-- PC用：1行表示 -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
-          <!-- ★ページ固有名：サポ箱TOP -->
           <span class="fw-normal ms-2">
             - サポ箱 TOP
+          </span>
+        </span>
+
+        <!-- スマホ用：2行表示 -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            サポ箱 TOP
           </span>
         </span>
 
@@ -84,7 +97,7 @@
             更新履歴
           </a>
 
-          <!-- ★「ダウンロード」ボタンは削除済み -->
+          <!-- ★TOPページはダウンロード無しの仕様のまま -->
 
         </div>
       </div>

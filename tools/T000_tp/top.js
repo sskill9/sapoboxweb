@@ -31,12 +31,23 @@
           </svg>
         </span>
 
-        <!-- サイト名 + ツール名 -->
-        <span class="fw-bold">
+        <!-- サイト名 + ツール名（PC用：1行表示） -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
           <!-- ★ツール固有名：ここを書き換えてください（例：T001 和暦↔西暦チェッカー） -->
           <span class="fw-normal ms-2">
             - テンプレートツール名（ここを書き換えてください）
+          </span>
+        </span>
+
+        <!-- サイト名 + ツール名（スマホ用：2行表示） -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <!-- ★ツール固有名（スマホ用）：長い名称でも折り返しやすくする -->
+          <span class="small d-block">
+            テンプレートツール名（ここを書き換えてください）
           </span>
         </span>
 

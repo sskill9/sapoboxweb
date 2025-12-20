@@ -1,6 +1,5 @@
 // top.js — TOPブロック（ナビバー：影付き＋ボタン風メニュー）
-// ※T000 テンプレート準拠 ＋ T001用にツール名とZIPリンクのみ変更
-// ※ ZIP ダウンロードは常にサーバー側を参照（案3）
+// ※T000 レスポンシブ構成準拠 ＋ T001用にツール名とZIPリンクのみ変更
 
 (function () {
   var topEl = document.getElementById("top-block");
@@ -16,7 +15,7 @@
          class="navbar-brand d-flex align-items-center me-3"
          aria-label="Support Tool Box（サポ箱）TOPページへ">
         <span class="me-2">
-          <svg xmlns="http://www.w3.org/200.svg"
+          <svg xmlns="http://www.w3.org/200/svg"
                width="32"
                height="32"
                viewBox="0 0 64 64"
@@ -33,12 +32,24 @@
           </svg>
         </span>
 
-        <span class="fw-bold">
+        <!-- PC用：1行 -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
           <span class="fw-normal ms-2">
             - T001 生年月日 和暦↔西暦変換
           </span>
         </span>
+
+        <!-- スマホ用：2行 -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T001 生年月日 和暦↔西暦変換
+          </span>
+        </span>
+
       </a>
 
       <!-- トグル（スマホ） -->
@@ -56,7 +67,6 @@
       <div class="collapse navbar-collapse" id="toolNavbar">
         <div class="ms-auto d-flex align-items-center flex-wrap gap-2 py-2 py-md-0">
 
-          <!-- 使い方 -->
           <a class="btn btn-outline-light btn-sm"
              href="#"
              data-bs-toggle="modal"
@@ -64,7 +74,6 @@
             使い方
           </a>
 
-          <!-- リンク -->
           <a class="btn btn-outline-light btn-sm"
              href="#"
              data-bs-toggle="modal"
@@ -72,7 +81,6 @@
             リンク
           </a>
 
-          <!-- 更新履歴 -->
           <a class="btn btn-outline-light btn-sm"
              href="#"
              data-bs-toggle="modal"
@@ -80,7 +88,7 @@
             更新履歴
           </a>
 
-          <!-- ダウンロード（案3対応：常にサーバーのZIP） -->
+          <!-- ZIPダウンロード -->
           <a class="btn btn-outline-light btn-sm"
              href="https://ss1.xrea.com/sskill9.s323.xrea.com/tools/T001_wareki-seireki/T001.zip"
              target="_blank"

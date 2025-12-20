@@ -1,4 +1,8 @@
 // top.js — TOPブロック（ナビバー：影付き＋ボタン風メニュー）
+// T003 ハンコジェネレータ用（レスポンシブ対応：スマホ2行／PC1行）
+// ・ツール名：T003 ハンコジェネレータ
+// ・ダウンロードはサーバー上の ZIP を参照（tools/T003_hanko/T003.zip を想定）
+
 (function () {
   var topEl = document.getElementById("top-block");
   if (!topEl) return;
@@ -31,12 +35,21 @@
           </svg>
         </span>
 
-        <!-- サイト名 + ツール名 -->
-        <span class="fw-bold">
+        <!-- サイト名 + ツール名（PC用：1行表示） -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
-          <!-- ★ツール固有名：ここを書き換えてください（例：T001 和暦↔西暦チェッカー） -->
           <span class="fw-normal ms-2">
-            - テンプレートツール名（ここを書き換えてください）
+            - T003 ハンコジェネレータ
+          </span>
+        </span>
+
+        <!-- サイト名 + ツール名（スマホ用：2行表示） -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T003 ハンコジェネレータ
           </span>
         </span>
 
@@ -84,12 +97,12 @@
 
           <!-- ★ZIPダウンロード：
                命名ルールは「フォルダ名 + .zip」
-               例）フォルダ名が T001 の場合 → T001.zip
-               必要に応じて href のファイル名を書き換えてください。
+               例）フォルダ名が T003_hanko の場合 → T003.zip
           -->
           <a class="btn btn-outline-light btn-sm"
-             href="./T000.zip"
-             download
+             href="https://ss1.xrea.com/sskill9.s323.xrea.com/tools/T003_hanko/T003.zip"
+             target="_blank"
+             rel="noopener"
              aria-label="このツール一式をZIPでダウンロード">
             ダウンロード
           </a>

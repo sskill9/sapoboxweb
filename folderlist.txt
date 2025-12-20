@@ -2,8 +2,6 @@
 ボリューム シリアル番号は 687F-0312 です
 C:.
 │  .gitattributes
-│  20251214134351.zip
-│  20251214153359.zip
 │  backup7z_ansi.bat
 │  codex-init.patch
 │  content.js
@@ -22,11 +20,6 @@ C:.
 │  treefolderlist.bat
 │  
 ├─BK
-│      20251130184733.zip
-│      20251130193504.zip
-│      20251202012622.zip
-│      20251202101811.zip
-│      
 ├─libs
 │  └─bootstrap-5.3.8-dist
 │      ├─css
@@ -53,6 +46,7 @@ C:.
     │          
     ├─T000_tp
     │  │  20251202113516.zip
+    │  │  20251220104639.zip
     │  │  backup7z_ansi.bat
     │  │  content.js
     │  │  Download_zip.bat
@@ -63,6 +57,7 @@ C:.
     │  │  modal-links.js
     │  │  modal-terms.js
     │  │  sapobox_rule_No85_complete.md
+    │  │  sapobox_rule_No87_edit_first_protocol.md
     │  │  T000index.html
     │  │  top.js
     │  │  
@@ -106,20 +101,8 @@ C:.
     │  │  top.js
     │  │  
     │  ├─BK
-    │  │  │  20251028003135.zip
-    │  │  │  20251028011139.zip
-    │  │  │  20251130162727.zip
-    │  │  │  20251130174151.zip
-    │  │  │  
-    │  │  └─OLD
-    │  │      │  footer.html
-    │  │      │  logo.svg
-    │  │      │  T001index - コピー.html
-    │  │      │  
-    │  │      └─icons
-    │  │              facebook.svg
-    │  │              x.svg
-    │  │              
+    │  │      20251130174151.zip
+    │  │      
     │  └─libs
     │      └─bootstrap-5.3.8-dist
     │          ├─css
@@ -129,6 +112,7 @@ C:.
     │                  bootstrap.bundle.min.js
     │                  
     ├─T002_pw-gen01
+    │  │  20251220105943.zip
     │  │  backup7z_ansi.bat
     │  │  content.js
     │  │  Download_zip.bat
@@ -143,7 +127,6 @@ C:.
     │  │  top.js
     │  │  
     │  ├─BK
-    │  │      20251130212122.zip
     │  │      20251130230934.zip
     │  │      
     │  └─libs
@@ -155,6 +138,7 @@ C:.
     │                  bootstrap.bundle.min.js
     │                  
     ├─T003_hanko
+    │  │  20251220111047.zip
     │  │  backup7z_ansi.bat
     │  │  content.js
     │  │  Download_zip.bat
@@ -170,19 +154,8 @@ C:.
     │  │  top.js
     │  │  
     │  ├─BK
-    │  │  │  20251130193453.zip
-    │  │  │  
-    │  │  └─old
-    │  │      │  footer.html
-    │  │      │  logo.svg
-    │  │      │  style.css
-    │  │      │  tool.css
-    │  │      │  tool.js
-    │  │      │  
-    │  │      └─icons
-    │  │              facebook.svg
-    │  │              x.svg
-    │  │              
+    │  │      20251130193453.zip
+    │  │      
     │  └─libs
     │      └─bootstrap-5.3.8-dist
     │          ├─css
@@ -206,8 +179,6 @@ C:.
     │  │  top.js
     │  │  
     │  ├─BK
-    │  │      20251202113152.zip
-    │  │      
     │  └─libs
     │      │  jpn.traineddata
     │      │  
@@ -310,7 +281,74 @@ C:.
     │          └─js
     │                  bootstrap.bundle.min.js
     │                  
-    └─T008_kanjiyomi01
+    ├─T008_kanjiyomi01
+    │  │  backup7z_ansi.bat
+    │  │  content.js
+    │  │  Download_zip.bat
+    │  │  favicon.svg
+    │  │  footer.js
+    │  │  modal-changelog.js
+    │  │  modal-howto.js
+    │  │  modal-links.js
+    │  │  modal-terms.js
+    │  │  sapobox_rule_No85_complete.md
+    │  │  T008.zip
+    │  │  T008index.html
+    │  │  top.js
+    │  │  
+    │  ├─BK
+    │  │      20251214222704.zip
+    │  │      dict.js
+    │  │      
+    │  ├─build
+    │  │      kanjidic2_to_dictjs.py
+    │  │      README_build.txt
+    │  │      
+    │  ├─data
+    │  │      dict.js
+    │  │      dict_manual.csv
+    │  │      kanjidic2.xml
+    │  │      radicals_map.js
+    │  │      
+    │  └─libs
+    │      └─bootstrap-5.3.8-dist
+    │          ├─css
+    │          │      bootstrap.min.css
+    │          │      
+    │          └─js
+    │                  bootstrap.bundle.min.js
+    │                  
+    ├─T009_outou01
+    │  │  20251220193007.zip
+    │  │  20251220200120.zip
+    │  │  20251220205255.zip
+    │  │  20251220211830.zip
+    │  │  backup7z_ansi.bat
+    │  │  content.js
+    │  │  Download_zip.bat
+    │  │  favicon.svg
+    │  │  footer.js
+    │  │  inbound_answer_quick_spec_v2.md
+    │  │  modal-changelog.js
+    │  │  modal-howto.js
+    │  │  modal-links.js
+    │  │  modal-terms.js
+    │  │  T009.zip
+    │  │  T009index.html
+    │  │  T009_change_declaration.md
+    │  │  tool.js
+    │  │  top.js
+    │  │  
+    │  ├─BK
+    │  └─libs
+    │      └─bootstrap-5.3.8-dist
+    │          ├─css
+    │          │      bootstrap.min.css
+    │          │      
+    │          └─js
+    │                  bootstrap.bundle.min.js
+    │                  
+    └─T010_sc
         │  backup7z_ansi.bat
         │  content.js
         │  Download_zip.bat
@@ -321,13 +359,12 @@ C:.
         │  modal-links.js
         │  modal-terms.js
         │  sapobox_rule_No85_complete.md
-        │  T008.zip
-        │  T008index.html
+        │  sapobox_rule_No87_edit_first_protocol.md
+        │  T010index.html
         │  top.js
         │  
         ├─BK
-        │  │  20251214222704.zip
-        │  │  dict.js
+        │  │  20251130024415.zip
         │  │  
         │  └─old
         │      │  footer.html
@@ -340,16 +377,7 @@ C:.
         │              facebook.svg
         │              x.svg
         │              
-        ├─build
-        │      kanjidic2_to_dictjs.py
-        │      README_build.txt
-        │      
         ├─data
-        │      dict.js
-        │      dict_manual.csv
-        │      kanjidic2.xml
-        │      radicals_map.js
-        │      
         └─libs
             └─bootstrap-5.3.8-dist
                 ├─css

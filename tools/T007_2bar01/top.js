@@ -31,10 +31,21 @@
           </svg>
         </span>
 
-        <span class="d-flex align-items-center flex-wrap">
+        <!-- サイト名＋ツール名（PC用：1行表示） -->
+        <span class="d-none d-md-inline-flex align-items-center flex-wrap">
           <span class="fw-semibold">Support Tool Box（サポ箱）</span>
           <span class="fw-normal ms-2">
-            - 2次元QRコード生成
+            - T007 2次元QRコード生成
+          </span>
+        </span>
+
+        <!-- サイト名＋ツール名（スマホ用：2行表示） -->
+        <span class="d-inline d-md-none">
+          <span class="fw-semibold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T007 2次元QRコード生成
           </span>
         </span>
       </a>

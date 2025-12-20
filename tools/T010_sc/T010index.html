@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- ★ツール固有タイトル：ここを書き換えてください
+       例）Support Tool Box | T001 和暦↔西暦チェッカー
+  -->
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <title>Support Tool Box | テンプレートツール名（ここを書き換えてください）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ★ツール説明：ここを書き換えてください
+       ・検索結果やSNSのカードなどに表示される想定の説明文です。
+       ・120文字程度がおすすめします。
+  -->
+  <meta name="description" content="ここにこのツールの説明文（120文字程度）を入れてください。">
+
+  <!-- Bootstrap CSS（ローカル） -->
+  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/css/bootstrap.min.css -->
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <!-- 共通CSS（必要に応じて） -->
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- ヘッダー（top.js が中身を差し込む） -->
+  <div id="top-block"></div>
+
+  <!-- コンテンツ本体（content.js が中身を差し込む） -->
+  <!-- ★ツール固有の説明・入力フォームなどは content.js 側で編集します -->
+  <main id="content-block" class="pb-5"></main>
+
+  <!-- フッター（footer.js が中身を差し込む） -->
+  <!-- sticky footer のため margin-top:auto をここに付与 -->
+  <div id="footer-block" style="margin-top:auto;"></div>
+
+  <!-- Bootstrap JS（バンドル版） -->
+  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ビュー分割用 JS（ヘッダー／コンテンツ／フッター） -->
+  <script src="./top.js"></script>
+
+  <!-- ★追加：ショートカット確認（アプリ別データ） -->
+  <script src="./data/sc-windows11.js"></script>
+  <script src="./data/sc-excel.js"></script>
+  <script src="./data/sc-edge.js"></script>
+  <script src="./data/sc-word.js"></script>
+
+
+  <!-- ★追加：ショートカット確認（分割ファイル） -->
+  <script src="./sc-results.js"></script>
+  <script src="./sc-ui.js"></script>
+
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
+  <!-- ★各ツールごとに中身のテキストを書き換えて使います -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+</body>
+</html>

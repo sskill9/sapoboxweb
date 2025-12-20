@@ -32,10 +32,24 @@
           </svg>
         </span>
 
-        <span class="fw-bold">
+        <!-- PC用：1行表示 -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
-          <span class="fw-normal ms-2">- T004 簡易OCR</span>
+          <span class="fw-normal ms-2">
+            - T004 簡易OCR
+          </span>
         </span>
+
+        <!-- スマホ用：2行表示 -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T004 簡易OCR
+          </span>
+        </span>
+
       </a>
 
       <!-- トグル（スマホ） -->

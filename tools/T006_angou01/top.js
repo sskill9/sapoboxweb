@@ -1,4 +1,7 @@
 // top.js — TOPブロック（ナビバー：影付き＋ボタン風メニュー）
+// T006 ファイル暗号化／復号化（.angou）用
+// ・レスポンシブ対応：PCは1行表示、スマホは2行表示
+
 (function () {
   var topEl = document.getElementById("top-block");
   if (!topEl) return;
@@ -31,11 +34,21 @@
           </svg>
         </span>
 
-        <!-- サイト名 + ツール名 -->
-        <span class="fw-bold">
+        <!-- サイト名 + ツール名（PC用：1行表示） -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
           <span class="fw-normal ms-2">
             - T006 ファイル暗号化／復号化（.angou）
+          </span>
+        </span>
+
+        <!-- サイト名 + ツール名（スマホ用：2行表示） -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T006 ファイル暗号化／復号化（.angou）
           </span>
         </span>
       </a>

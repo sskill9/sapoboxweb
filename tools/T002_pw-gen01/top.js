@@ -1,7 +1,7 @@
 // top.js — TOPブロック（ナビバー：影付き＋ボタン風メニュー）
-// T002 パスワードジェネレーター用
-// ・T000テンプレート準拠（利用規約は top には置かない）
-// ・「ダウンロード」は常にサーバー上の ZIP へアクセス（案3）
+// T002 パスワードジェネレーター用（レスポンシブ対応：スマホ2行／PC1行）
+// ・T000テンプレート準拠
+// ・「ダウンロード」は常にサーバー上の ZIP にアクセス（案3）
 
 (function () {
   var topEl = document.getElementById("top-block");
@@ -32,10 +32,24 @@
           </svg>
         </span>
 
-        <span class="fw-bold">
+        <!-- PC用：1行 -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
-          <span class="fw-normal ms-2">- T002 パスワードジェネレーター</span>
+          <span class="fw-normal ms-2">
+            - T002 パスワードジェネレーター
+          </span>
         </span>
+
+        <!-- スマホ用：2行 -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T002 パスワードジェネレーター
+          </span>
+        </span>
+
       </a>
 
       <!-- トグル（スマホ） -->
@@ -77,7 +91,7 @@
             更新履歴
           </a>
 
-          <!-- ダウンロード（案3：常にサーバーの ZIP にアクセス） -->
+          <!-- ダウンロード -->
           <a class="btn btn-outline-light btn-sm"
              href="https://ss1.xrea.com/sskill9.s323.xrea.com/tools/T002_pw-gen01/T002.zip"
              target="_blank"

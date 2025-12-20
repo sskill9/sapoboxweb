@@ -23,7 +23,7 @@
 
     <!-- 右側：概要説明 -->
     <div class="text-muted small">
-      漢字1文字を貼り付けるだけで、代表的な読み・画数・部首・Unicodeを即時表示し、
+      漢字を貼り付けるだけで、代表的な読み・画数・部首・Unicodeを即時表示し、
       口頭伝達用の定型文をワンクリックでコピーできます（完全オフライン）。
     </div>
 
@@ -38,7 +38,7 @@
         <div class="card shadow-sm h-100">
 
           <div class="card-header bg-primary-subtle fw-bold">
-            入力（漢字1文字）
+            入力（漢字）
           </div>
 
           <div class="card-body">
@@ -50,7 +50,7 @@
                 class="form-control"
                 inputmode="text"
                 autocomplete="off"
-                placeholder="例：清 / 崎 / 﨑 など（1文字）">
+                placeholder="例：清 / 崎 / 﨑 など">
               <div class="form-text">
                 文字列を貼り付けた場合は、先頭の「空白でない1文字」を対象にします。
               </div>
@@ -214,6 +214,8 @@
   var btnCopyWithRead = document.getElementById("btnCopyWithRead");
 
   var toastArea = document.getElementById("copyToastArea");
+
+  var isComposing = false;
 
   function safeStr(v) {
     if (v === null || v === undefined) return "";
@@ -445,15 +447,16 @@ if (Array.isArray(rec)) {
   }
 
   function onInputChanged() {
-    var ch = firstNonSpaceChar(inputEl ? inputEl.value : "");
     if (!inputEl) return;
+    if (isComposing) return;
 
-    // 入力欄は「対象1文字」だけ残す（誤貼り付け対策）
+    var ch = firstNonSpaceChar(inputEl.value);
+
+    // 文字列が入力された場合は、先頭の「空白でない1文字」を対象にする（入力欄はそのまま保持）
     if (ch) {
-      inputEl.value = ch;
+
       renderForKanji(ch);
     } else {
-      inputEl.value = "";
       clearView();
     }
   }
@@ -468,6 +471,15 @@ if (Array.isArray(rec)) {
 
   // イベント設定
   if (inputEl) {
+    inputEl.addEventListener("compositionstart", function () {
+      isComposing = true;
+    });
+
+    inputEl.addEventListener("compositionend", function () {
+      isComposing = false;
+      onInputChanged();
+    });
+
     inputEl.addEventListener("input", onInputChanged);
     inputEl.addEventListener("paste", function () {
       // paste直後に反映されるように少し遅延

@@ -1,4 +1,8 @@
+// ===== TOPブロック（ナビバー：影付き＋ボタン風メニュー）ブロック =====
 // top.js — TOPブロック（ナビバー：影付き＋ボタン風メニュー）
+// T008 漢字口頭伝達補助（読み・画数・部首・Unicode）用
+// ・レスポンシブ対応：スマホ2行／PC1行
+
 (function () {
   var topEl = document.getElementById("top-block");
   if (!topEl) return;
@@ -8,11 +12,10 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm" aria-label="サポ箱ツール共通ナビゲーション">
     <div class="container">
 
-      <!-- ロゴ＋サイト名＋ツール名（ロゴとサイト名はサポ箱TOPへリンク） -->
+      <!-- ロゴ＋サイト名＋ツール名 -->
       <a href="../../index.html"
          class="navbar-brand d-flex align-items-center me-3"
          aria-label="Support Tool Box（サポ箱）TOPページへ">
-        <!-- SVGロゴ -->
         <span class="me-2">
           <svg xmlns="http://www.w3.org/2000/svg"
                width="32"
@@ -31,14 +34,23 @@
           </svg>
         </span>
 
-        <!-- サイト名 + ツール名 -->
-        <span class="fw-bold">
+        <!-- PC用：1行表示 -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
           <span class="fw-normal ms-2">
             - T008 漢字口頭伝達補助（読み・画数・部首・Unicode）
           </span>
         </span>
 
+        <!-- スマホ用：2行表示 -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T008 漢字口頭伝達補助（読み・画数・部首・Unicode）
+          </span>
+        </span>
       </a>
 
       <!-- トグル（スマホ） -->
@@ -95,3 +107,4 @@
 </header>
 `;
 })();
+// ===== TOPブロック（ナビバー：影付き＋ボタン風メニュー）ブロックここまで =====

@@ -1,4 +1,8 @@
 // top.js — TOPブロック（ナビバー：影付き＋ボタン風メニュー）
+// T005 CSV 文字コード判定＆変換ツール用
+// ・レスポンシブ対応：スマホ2行／PC1行
+// ・ZIPダウンロードリンク維持（案3）
+
 (function () {
   var topEl = document.getElementById("top-block");
   if (!topEl) return;
@@ -31,12 +35,21 @@
           </svg>
         </span>
 
-        <!-- サイト名 + ツール名 -->
-        <span class="fw-bold">
+        <!-- PC用：1行表示 -->
+        <span class="fw-bold d-none d-md-inline">
           Support Tool Box（サポ箱）
-          <!-- ★ツール固有名：ここを書き換えてください（例：T001 和暦↔西暦チェッカー） -->
           <span class="fw-normal ms-2">
             - T005 CSV 文字コード判定＆変換ツール
+          </span>
+        </span>
+
+        <!-- スマホ用：2行表示 -->
+        <span class="d-inline d-md-none">
+          <span class="fw-bold d-block">
+            Support Tool Box（サポ箱）
+          </span>
+          <span class="small d-block">
+            T005 CSV 文字コード判定＆変換ツール
           </span>
         </span>
 
@@ -82,7 +95,7 @@
             更新履歴
           </a>
 
-          <!-- ★ZIPダウンロード（修正箇所） -->
+          <!-- ★ZIPダウンロード -->
           <a class="btn btn-outline-light btn-sm"
              href="https://ss1.xrea.com/sskill9.s323.xrea.com/tools/T005_CSV-Convert01/T005.zip"
              download

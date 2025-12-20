@@ -283,6 +283,35 @@
         </div>
       </div>
 
+      <!-- ツールカード：T009 入電・応答率予測ツール(簡易版) -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header bg-primary-subtle fw-bold">
+            T009 入電・応答率予測ツール(簡易版)
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2">
+              <span class="badge rounded-pill fw-semibold me-1"
+                    style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+                入電・応答率予測
+              </span>
+              <span class="badge rounded-pill fw-semibold"
+                    style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+                コンタクトセンター向け
+              </span>
+            </div>
+            <p class="card-text small mb-3">
+              入電数・応答率・必要人員の目安を、簡易計算で即時に見える化します。
+            </p>
+            <div class="mt-auto">
+              <a href="./tools/T009_outou01/T009index.html" class="btn btn-primary btn-sm w-100">
+                開く
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
