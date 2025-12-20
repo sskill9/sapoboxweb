@@ -81,7 +81,7 @@
 
           <!-- ZIPダウンロード -->
           <a class="btn btn-outline-light btn-sm"
-             href="./T006.zip"
+             href="https://ss1.xrea.com/sskill9.s323.xrea.com/tools/T006_angou01/T006.zip"
              download
              aria-label="このツール一式をZIPでダウンロード">
             ダウンロード

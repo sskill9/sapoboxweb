@@ -3,6 +3,7 @@
 C:.
 „   .gitattributes
 „   20251214134351.zip
+„   20251214153359.zip
 „   backup7z_ansi.bat
 „   codex-init.patch
 „   content.js
@@ -21,20 +22,11 @@ C:.
 „   treefolderlist.bat
 „   
 „¥„ŸBK
-„   „   20251130184733.zip
-„   „   20251130193504.zip
-„   „   20251202012622.zip
-„   „   20251202101811.zip
-„   „   
-„   „¤„ŸOLD
-„           changelog.html
-„           fragments.js
-„           howto.html
-„           logo.svg
-„           mascot.png
-„           modal-loader.js
-„           nav-tools.html
-„           
+„       20251130184733.zip
+„       20251130193504.zip
+„       20251202012622.zip
+„       20251202101811.zip
+„       
 „¥„Ÿlibs
 „   „¤„Ÿbootstrap-5.3.8-dist
 „       „¥„Ÿcss
@@ -290,7 +282,35 @@ C:.
     „           „¤„Ÿjs
     „                   bootstrap.bundle.min.js
     „                   
-    „¤„ŸT007_2bar01
+    „¥„ŸT007_2bar01
+    „   „   backup7z_ansi.bat
+    „   „   content.js
+    „   „   Download_zip.bat
+    „   „   favicon.svg
+    „   „   footer.js
+    „   „   modal-changelog.js
+    „   „   modal-howto.js
+    „   „   modal-links.js
+    „   „   modal-terms.js
+    „   „   sapobox_rule_No85_complete.md
+    „   „   T007.zip
+    „   „   T007index.html
+    „   „   top.js
+    „   „   
+    „   „¥„ŸBK
+    „   „       20251214145702.zip
+    „   „       
+    „   „¤„Ÿlibs
+    „       „   qrcode.min.js
+    „       „   
+    „       „¤„Ÿbootstrap-5.3.8-dist
+    „           „¥„Ÿcss
+    „           „       bootstrap.min.css
+    „           „       
+    „           „¤„Ÿjs
+    „                   bootstrap.bundle.min.js
+    „                   
+    „¤„ŸT008_kanjiyomi01
         „   backup7z_ansi.bat
         „   content.js
         „   Download_zip.bat
@@ -301,10 +321,35 @@ C:.
         „   modal-links.js
         „   modal-terms.js
         „   sapobox_rule_No85_complete.md
-        „   T007index.html
+        „   T008.zip
+        „   T008index.html
         „   top.js
         „   
         „¥„ŸBK
+        „   „   20251214222704.zip
+        „   „   dict.js
+        „   „   
+        „   „¤„Ÿold
+        „       „   footer.html
+        „       „   logo.svg
+        „       „   style.css
+        „       „   tool.css
+        „       „   tool.js
+        „       „   
+        „       „¤„Ÿicons
+        „               facebook.svg
+        „               x.svg
+        „               
+        „¥„Ÿbuild
+        „       kanjidic2_to_dictjs.py
+        „       README_build.txt
+        „       
+        „¥„Ÿdata
+        „       dict.js
+        „       dict_manual.csv
+        „       kanjidic2.xml
+        „       radicals_map.js
+        „       
         „¤„Ÿlibs
             „¤„Ÿbootstrap-5.3.8-dist
                 „¥„Ÿcss

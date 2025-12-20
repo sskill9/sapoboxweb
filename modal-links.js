@@ -43,30 +43,14 @@
             </div>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div>
-              <div class="fw-bold">T000 テンプレート</div>
-              <div class="text-muted">
-                サポ箱ツール作成のベーステンプレートです。
-              </div>
-            </div>
-            <div class="ms-3">
-              <a
-                href="./tools/T000_tp/T000index.html"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-outline-primary btn-sm">
-                開く
-              </a>
-            </div>
-          </li>
-
         </ul>
 
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">閉じる</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">
+          閉じる
+        </button>
       </div>
 
     </div>

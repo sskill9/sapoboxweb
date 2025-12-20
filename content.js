@@ -224,6 +224,65 @@
         </div>
       </div>
 
+      <!-- ツールカード：T007 2次元QRコード生成 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header bg-primary-subtle fw-bold">
+            T007 2次元QRコード生成
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2">
+              <span class="badge rounded-pill fw-semibold me-1"
+                    style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+                QRコード
+              </span>
+              <span class="badge rounded-pill fw-semibold"
+                    style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+                汎用ツール
+              </span>
+            </div>
+            <p class="card-text small mb-3">
+              任意のURLから2次元バーコードを生成します。png形式でダウンロード可能です。
+            </p>
+            <div class="mt-auto">
+              <a href="./tools/T007_2bar01/T007index.html" class="btn btn-primary btn-sm w-100">
+                開く
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ツールカード：T008 漢字口頭伝達補助（読み・画数・部首・Unicode） -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header bg-primary-subtle fw-bold">
+            T008 漢字口頭伝達補助（読み・画数・部首・Unicode）
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2">
+              <span class="badge rounded-pill fw-semibold me-1"
+                    style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+                漢字
+              </span>
+              <span class="badge rounded-pill fw-semibold"
+                    style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+                汎用ツール
+              </span>
+            </div>
+            <p class="card-text small mb-3">
+              漢字1文字を貼り付けるだけで、代表的な読み・画数・部首・Unicodeを即時表示し、
+              口頭伝達用の定型文をコピーできます（完全オフライン対応）。
+            </p>
+            <div class="mt-auto">
+              <a href="./tools/T008_kanjiyomi01/T008index.html" class="btn btn-primary btn-sm w-100">
+                開く
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

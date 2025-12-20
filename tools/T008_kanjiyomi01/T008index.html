@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <title>Support Tool Box | T008 漢字口頭伝達補助（読み・画数・部首・Unicode）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="漢字1文字を貼り付けるだけで、代表的な読み・画数・部首・Unicodeを即時表示し、口頭伝達用の定型文をコピーできます（完全オフライン対応）。">
+
+  <meta name="author" content="Support Tool Box（サポ箱）">
+
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <style>
+    /* 右下 TOPへ戻るボタン（content.js が生成する #backToTopBtn 用） */
+    #backToTopBtn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 1030;
+      display: none;
+    }
+  </style>
+</head>
+
+<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
+
+  <div id="top-block"></div>
+
+  <main id="content-block" class="pb-5"></main>
+
+  <div id="footer-block" style="margin-top:auto;"></div>
+
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 辞書（オフライン同梱：fetchしない） -->
+  <script src="./data/radicals_map.js"></script>
+  <script src="./data/dict.js"></script>
+
+  <!-- ビュー分割用 JS（ヘッダー／コンテンツ／フッター） -->
+  <script src="./top.js"></script>
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+</body>
+</html>

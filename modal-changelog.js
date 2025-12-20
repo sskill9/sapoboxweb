@@ -27,7 +27,17 @@
 
         <dl class="small mb-0">
 
-          <dt class="fw-bold">2025-11-30</dt>
+          <dt class="fw-bold">2025-12-14</dt>
+          <dd>
+            T007 2次元QRコード生成ツールを追加。
+          </dd>
+
+          <dt class="fw-bold mt-3">2025-12-上旬</dt>
+          <dd>
+            T006 ファイル暗号化／復号化ツールを追加。
+          </dd>
+
+          <dt class="fw-bold mt-3">2025-11-30</dt>
           <dd>
             T000 テンプレートを基準としてサポ箱TOPページを全面リニューアル。<br>
             ・TOPバー／コンテンツ／フッターを分離構成に統一<br>
@@ -37,7 +47,7 @@
 
           <dt class="fw-bold mt-3">2025-11-24</dt>
           <dd>
-            Excel / CSV ビューアツールを一覧に追加。
+            Excel / CSV ビューアツール（T005）を一覧に追加。
           </dd>
 
           <dt class="fw-bold mt-3">2025-11-20</dt>
@@ -59,7 +69,9 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">閉じる</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">
+          閉じる
+        </button>
       </div>
 
     </div>
