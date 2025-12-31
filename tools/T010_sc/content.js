@@ -136,12 +136,31 @@
 
 </div>
 
+<!-- コピー完了トースト（上部中央） -->
+<div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index:1060;">
+  <div id="scCopyToast"
+       class="toast align-items-center text-bg-dark border-0"
+       role="status"
+       aria-live="polite"
+       aria-atomic="true">
+    <div class="d-flex">
+      <div id="scCopyToastBody" class="toast-body small">
+        ショートカットをコピーしました。
+      </div>
+      <button type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="閉じる"></button>
+    </div>
+  </div>
+</div>
+
 <!-- 右下：TOPへ戻るボタン -->
 <button id="backToTopBtn"
         type="button"
         class="btn btn-primary btn-sm rounded-circle shadow"
         aria-label="ページの先頭へ戻る"
-        style="display:none;">
+        style="position:fixed;right:1.5rem;bottom:1.5rem;display:none;z-index:1030;">
   ↑
 </button>
 `;
@@ -160,7 +179,8 @@
   if (!backBtn) return;
 
   window.addEventListener("scroll", function () {
-    if (window.pageYOffset > 200) {
+    var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (y > 150) {
       backBtn.style.display = "inline-flex";
     } else {
       backBtn.style.display = "none";

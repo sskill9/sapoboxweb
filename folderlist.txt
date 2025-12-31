@@ -358,13 +358,23 @@ C:.
         „   modal-howto.js
         „   modal-links.js
         „   modal-terms.js
-        „   sapobox_rule_No85_complete.md
         „   sapobox_rule_No87_edit_first_protocol.md
+        „   sc-results.js
+        „   sc-ui.js
+        „   T010.zip
         „   T010index.html
         „   top.js
         „   
         „¥„ŸBK
         „   „   20251130024415.zip
+        „   „   20251221022627.zip
+        „   „   20251221023937.zip
+        „   „   20251221025103.zip
+        „   „   20251221130724.zip
+        „   „   20251221131347.zip
+        „   „   20251221132550.zip
+        „   „   20251221140617.zip
+        „   „   20251221141326.zip
         „   „   
         „   „¤„Ÿold
         „       „   footer.html
@@ -378,6 +388,17 @@ C:.
         „               x.svg
         „               
         „¥„Ÿdata
+        „       sc-chrome.js
+        „       sc-edge.js
+        „       sc-excel.js
+        „       sc-manifest.js
+        „       sc-outlook-new.js
+        „       sc-outlook.js
+        „       sc-powerpoint.js
+        „       sc-teams.js
+        „       sc-windows11.js
+        „       sc-word.js
+        „       
         „¤„Ÿlibs
             „¤„Ÿbootstrap-5.3.8-dist
                 „¥„Ÿcss

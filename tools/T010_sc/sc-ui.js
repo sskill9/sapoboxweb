@@ -35,27 +35,28 @@
 
     if (badgesEl) {
       var html = "";
-      for (var i = 0; i < (SC_APP.data.apps || []).length; i++) {
-        var raw = SC_APP.data.apps[i];
-        var disp = SC_APP.appLabelToDisplay(raw);
 
-        html += [
-          '<span class="badge rounded-pill fw-semibold me-2" style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">',
-          SC_APP.escapeHtml(disp),
-          "</span>"
-        ].join("");
-      }
+      // 固定バッジ：ショートカット／コンタクトセンター向け
+      html += [
+        '<span class="badge rounded-pill fw-semibold me-2" ',
+        'style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">',
+        'ショートカット',
+        "</span>"
+      ].join("");
 
-      html += '<span class="badge rounded-pill fw-semibold" style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">ショートカット</span>';
+      html += [
+        '<span class="badge rounded-pill fw-semibold" ',
+        'style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">',
+        'コンタクトセンター向け',
+        "</span>"
+      ].join("");
+
       badgesEl.innerHTML = html;
     }
 
     if (descEl) {
-      var appsText = (SC_APP.data.apps && SC_APP.data.apps.length > 0)
-        ? SC_APP.data.apps.map(function (a) { return SC_APP.appLabelToDisplay(a); }).join(" / ")
-        : "（データ未読込）";
-
-      descEl.textContent = "キーワード検索（例：コピー／スクリーンショット）と、画面上のキー選択でショートカットを絞り込めます。※このプロトタイプは " + appsText + "（仮データ：JS読込）です。";
+      descEl.textContent =
+        "キーワード検索（例：コピー／スクリーンショット）と、画面上のキー選択・アプリ絞り込みでショートカットを検索できます。コンタクトセンター業務での作業効率化を目的とした正式版ツールです。";
     }
   };
 
@@ -72,27 +73,48 @@
       return;
     }
 
+    // 表示順を「Win11（Windows11） → Edge → Chrome → それ以外」に並べ替える
+    var priorityOrder = ["Windows11", "Edge", "Chrome"];
+    var priorityApps = [];
+    var otherApps = [];
+
+    for (var i = 0; i < apps.length; i++) {
+      var raw = apps[i];
+      if (priorityOrder.indexOf(raw) !== -1) {
+        // まだ入っていなければ追加
+        if (priorityApps.indexOf(raw) === -1) {
+          priorityApps.push(raw);
+        }
+      } else {
+        otherApps.push(raw);
+      }
+    }
+
+    var orderedApps = priorityApps.concat(otherApps);
+
     var allMode = (SC_APP.state.selectedApps.length === 0);
 
     var html = "";
+    // 全アプリボタン：縦方向の余白を付けるため mb-2 を追加
     html += [
       '<button type="button" class="',
-      (allMode ? "btn btn-primary btn-sm" : "btn btn-outline-secondary btn-sm"),
+      (allMode ? "btn btn-primary btn-sm mb-2" : "btn btn-outline-secondary btn-sm mb-2"),
       '" id="scAppAllBtn" aria-pressed="',
       (allMode ? "true" : "false"),
       '">全アプリ</button>'
     ].join("");
 
-    for (var i = 0; i < apps.length; i++) {
-      var raw = apps[i];
-      var disp = SC_APP.appLabelToDisplay(raw);
-      var active = allMode ? true : SC_APP.arrayContains(SC_APP.state.selectedApps, raw);
+    // 各アプリボタン：クラスに mb-2 を追加して、2段になったときにボタン同士がくっつかないようにする
+    for (var j = 0; j < orderedApps.length; j++) {
+      var rawApp = orderedApps[j];
+      var disp = SC_APP.appLabelToDisplay(rawApp);
+      var active = allMode ? true : SC_APP.arrayContains(SC_APP.state.selectedApps, rawApp);
 
       html += [
         ' <button type="button" class="',
-        (active ? "btn btn-primary btn-sm" : "btn btn-outline-secondary btn-sm"),
+        (active ? "btn btn-primary btn-sm mb-2" : "btn btn-outline-secondary btn-sm mb-2"),
         ' sc-app-btn" data-app="',
-        SC_APP.escapeAttr(raw),
+        SC_APP.escapeAttr(rawApp),
         '" aria-pressed="',
         (active ? "true" : "false"),
         '">',

@@ -1,10 +1,6 @@
-// modal-changelog.js — 更新履歴モーダル
+// modal-changelog.js — 更新履歴モーダル（T010）
 //
-// 【このファイルで主に書き換えるポイント】
-//  1) モーダルタイトル（必要に応じてツール名を付加）
-//  2) 日付・バージョン・変更内容（各ツールごとに自由に編集）
-//
-//  ※ 初期状態では「テンプレート公開」の例と、「ここを書き換えてください」の例を入れています。
+// 本モーダルでは、ツールの変更点を随時記録します。
 
 (function () {
   var wrapper = document.createElement("div");
@@ -13,24 +9,52 @@
   <div class="modal-dialog modal-xl modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
-        <!-- ★タイトル：必要に応じてツール名を含めてください -->
-        <!-- 例）更新履歴：T001 和暦↔西暦チェッカー -->
-        <h2 class="modal-title h5 mb-0" id="modalChangelogLabel">更新履歴（このツール）</h2>
+        <h2 class="modal-title h5 mb-0" id="modalChangelogLabel">更新履歴：T010 ショートカット検索ツール</h2>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="閉じる"></button>
       </div>
       <div class="modal-body">
         <ul class="list-group">
 
-          <!-- ★初期公開の例：テンプレートから各ツール用に書き換えてください -->
+          <!-- 初回構築 -->
           <li class="list-group-item">
-            <span class="badge bg-primary me-2">2025-11-30</span>
-            v1.0.0 テンプレート版からこのツールを作成。（必要に応じて書き換えてください）
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.0.0 初版公開（T000テンプレートを基に T010 として構築）
           </li>
 
-          <!-- ★以降の更新履歴：必要に応じて追記・編集してください -->
+          <!-- 改善・修正内容 -->
           <li class="list-group-item">
-            <span class="badge bg-secondary me-2">2025-12-xx</span>
-            v1.1.0 機能や入力項目、結果表示などを実運用に合わせて調整。（ここを書き換えてください）
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.1.0 TOPへ戻るボタン修正（表示位置／閾値調整）
+          </li>
+
+          <li class="list-group-item">
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.2.0 コピートースト機能を追加（ショートカットコピー時に通知表示）
+          </li>
+
+          <li class="list-group-item">
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.3.0 Outlook（新→new）表示修正
+          </li>
+
+          <li class="list-group-item">
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.4.0 アプリバッジ表示調整（順序・折返し・余白改善）
+          </li>
+
+          <li class="list-group-item">
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.5.0 「使い方」更新（本ツール専用版に刷新）
+          </li>
+
+          <li class="list-group-item">
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.6.0 公式リンク一式を追加（Win11／Chrome／Edge／Excel／Outlook／PowerPoint／Teams／Word）
+          </li>
+
+          <li class="list-group-item">
+            <span class="badge bg-primary me-2">2025-12-21</span>
+            v1.7.0 データファイル拡張対応（Outlook 新版データ追加）
           </li>
 
         </ul>

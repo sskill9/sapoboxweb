@@ -312,6 +312,38 @@
         </div>
       </div>
 
+
+      <!-- ツールカード：T010 ショートカット確認 -->
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm">
+    <div class="card-header bg-primary-subtle fw-bold">
+      T010 ショートカット確認
+    </div>
+    <div class="card-body d-flex flex-column">
+      <div class="mb-2">
+        <span class="badge rounded-pill fw-semibold me-1"
+              style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+          ショートカット
+        </span>
+        <span class="badge rounded-pill fw-semibold"
+              style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+          コンタクトセンター向け
+        </span>
+      </div>
+      <p class="card-text small mb-3">
+        キーワード検索（例：コピー／スクリーンショット）と、画面上のキー選択・アプリ絞り込みで
+        ショートカットを検索できます。コンタクトセンター業務での作業効率化を目的とした正式版ツールです。
+      </p>
+      <div class="mt-auto">
+        <a href="./tools/T010_sc/T010index.html" class="btn btn-primary btn-sm w-100">
+          開く
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   </section>
 

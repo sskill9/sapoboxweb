@@ -311,13 +311,21 @@
   // =========================
   // コピー
   // =========================
-  SC_APP.copyText = function (text) {
+  // text: クリップボードにコピーする全文
+  // comboTextForToast: トーストに表示するショートカットキー（例：Win+Shift+S）
+  SC_APP.copyText = function (text, comboTextForToast) {
+    var toastLabel = comboTextForToast || text;
+
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).catch(function () {
+      navigator.clipboard.writeText(text).then(function () {
+        SC_APP.showCopyToast(toastLabel);
+      }).catch(function () {
         SC_APP.fallbackCopy(text);
+        SC_APP.showCopyToast(toastLabel);
       });
     } else {
       SC_APP.fallbackCopy(text);
+      SC_APP.showCopyToast(toastLabel);
     }
   };
 
@@ -334,6 +342,28 @@
       document.body.removeChild(ta);
     } catch (e) {
       // 何もしない（環境により不可）
+    }
+  };
+
+  // コピー完了トースト表示
+  SC_APP.showCopyToast = function (comboText) {
+    var toastEl = document.getElementById("scCopyToast");
+    var bodyEl = document.getElementById("scCopyToastBody");
+    if (!toastEl || !bodyEl) return;
+
+    var msg = comboText ? (comboText + " をコピーしました。") : "ショートカットをコピーしました。";
+    bodyEl.textContent = msg;
+
+    if (window.bootstrap && typeof bootstrap.Toast === "function") {
+      var toast = bootstrap.Toast.getOrCreateInstance(toastEl);
+      toast.show();
+    } else {
+      toastEl.classList.add("show");
+      toastEl.style.display = "block";
+      setTimeout(function () {
+        toastEl.classList.remove("show");
+        toastEl.style.display = "none";
+      }, 1500);
     }
   };
 
@@ -408,6 +438,16 @@
       var item = filtered[r];
       var combo = SC_APP.comboToString(item.keys);
       var appDisp = SC_APP.appLabelToDisplay(item.app);
+      var title = item.name || "";
+      var desc = item.desc || "";
+
+      // クリップボードにコピーする全文（アプリ名／タイトル／説明／キー）
+      var copyPayloadLines = [];
+      copyPayloadLines.push("【アプリ】" + appDisp);
+      copyPayloadLines.push("【タイトル】" + title);
+      copyPayloadLines.push("【説明】" + desc);
+      copyPayloadLines.push("【キー】" + combo);
+      var copyPayload = copyPayloadLines.join("\n");
 
       html += [
         '<li class="list-group-item">',
@@ -416,12 +456,12 @@
         '      <div class="fw-bold">' + SC_APP.escapeHtml(combo) + "</div>",
         '      <div class="mt-1">',
         '        <span class="badge text-bg-secondary me-2">' + SC_APP.escapeHtml(appDisp) + "</span>",
-        '        <span class="fw-semibold">' + SC_APP.escapeHtml(item.name) + "</span>",
+        '        <span class="fw-semibold">' + SC_APP.escapeHtml(title) + "</span>",
         "      </div>",
-        '      <div class="text-muted small mt-1">' + SC_APP.escapeHtml(item.desc) + "</div>",
+        '      <div class="text-muted small mt-1">' + SC_APP.escapeHtml(desc) + "</div>",
         "    </div>",
         '    <div class="d-flex flex-column gap-2">',
-        '      <button type="button" class="btn btn-outline-primary btn-sm sc-copy-btn" data-copy="' + SC_APP.escapeAttr(combo) + '">コピー</button>',
+        '      <button type="button" class="btn btn-outline-primary btn-sm sc-copy-btn" data-copy="' + SC_APP.escapeAttr(copyPayload) + '" data-key="' + SC_APP.escapeAttr(combo) + '">コピー</button>',
         "    </div>",
         "  </div>",
         "</li>"
@@ -434,8 +474,9 @@
     var copyBtns = resultEl.querySelectorAll(".sc-copy-btn");
     for (var ci = 0; ci < copyBtns.length; ci++) {
       copyBtns[ci].addEventListener("click", function (ev) {
-        var txt = ev.currentTarget.getAttribute("data-copy") || "";
-        SC_APP.copyText(txt);
+        var fullText = ev.currentTarget.getAttribute("data-copy") || "";
+        var comboText = ev.currentTarget.getAttribute("data-key") || "";
+        SC_APP.copyText(fullText, comboText);
       });
     }
   };
