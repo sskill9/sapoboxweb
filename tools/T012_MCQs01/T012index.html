@@ -1,0 +1,78 @@
+<!-- ===== [HTML] ドキュメント - 宣言と開始タグ ===== -->
+<!DOCTYPE html>
+<html lang="ja">
+<!-- ===== [HTML] ドキュメント - 宣言と開始タグ ここまで ===== -->
+
+<!-- ===== [HTML] HEAD - メタ/リンク/スタイル ===== -->
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <title>Support Tool Box | テンプレートツール名（ここを書き換えてください）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="ここにこのツールの説明文を入れてください（例：コールセンター業務を支援するための◯◯チェックツールです）。">
+
+  <meta name="author" content="Support Tool Box（サポ箱）">
+
+  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <style>
+    #backToTopBtn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 1030;
+      display: none;
+    }
+  </style>
+</head>
+<!-- ===== [HTML] HEAD - メタ/リンク/スタイル ここまで ===== -->
+
+<!-- ===== [HTML] BODY - 本体 ===== -->
+<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- TOPバー -->
+  <div id="top-block"></div>
+
+  <!-- コンテンツ -->
+  <main id="content-block" class="pb-5"></main>
+
+  <!-- フッター -->
+  <div id="footer-block" style="margin-top:auto;"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 分割ビュー -->
+  <script src="./top.js"></script>
+  <script src="./content.js"></script>
+  <script src="./footer.js"></script>
+
+  <!-- モーダル -->
+  <script src="./modal-howto.js"></script>
+  <script src="./modal-links.js"></script>
+  <script src="./modal-changelog.js"></script>
+  <script src="./modal-terms.js"></script>
+
+  <!-- ===== testpack 読み込み（本体・削除禁止）===== -->
+  <script src="./testpack-manifest.js"></script>
+  <!-- ===== testpack 読み込みここまで ===== -->
+
+  <!-- ===== 暗号ユーティリティ ===== -->
+  <script src="./crypto.js"></script>
+  <!-- ===== 暗号ユーティリティここまで ===== -->
+
+  <!-- ===== アプリ本体 ===== -->
+  <script src="./app.js"></script>
+  <!-- ===== アプリ本体ここまで ===== -->
+
+  <!-- ===== 作成ツール（builder） ===== -->
+  <script src="./builder.js"></script>
+  <!-- ===== 作成ツール（builder）ここまで ===== -->
+
+</body>
+</html>
+<!-- ===== [HTML] BODY - 本体 ここまで ===== -->

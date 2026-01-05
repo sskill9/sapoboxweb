@@ -1,0 +1,19 @@
+/*
+  File: tool.css
+  Template: Support Tool Box / T000
+  Author: {TOOL_AUTHOR}
+  Version: {TOOL_VERSION}
+  Date: {TOOL_DATE} (JST)
+  Notes:
+    - 各ツールごとに UI の微調整や個別スタイルを追加してください。
+    - テンプレでは最小限のみ定義しています。
+*/
+
+/* Placeholder emphasis */
+#toolForm {
+  /* ここに個別のレイアウト調整を追加 */
+}
+
+#outputPrimary {
+  font-weight: 600;
+}

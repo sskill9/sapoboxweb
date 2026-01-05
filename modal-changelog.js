@@ -27,7 +27,13 @@
 
         <dl class="small mb-0">
 
-          <dt class="fw-bold">2025-12-14</dt>
+          <dt class="fw-bold">2026-01-01</dt>
+          <dd>
+            ツール一覧カードに「ダウンロード」ボタンを追加。<br>
+            各ツールを ZIP 形式で取得し、ローカル環境でも利用できるように対応。
+          </dd>
+
+          <dt class="fw-bold mt-3">2025-12-14</dt>
           <dd>
             T007 2次元QRコード生成ツールを追加。
           </dd>

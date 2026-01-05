@@ -33,20 +33,27 @@
           <li>各カードの「開く」を押すとツールが開きます。</li>
         </ol>
 
-        <h6 class="mt-3">2. TOPバーのメニュー</h6>
+        <h6 class="mt-3">2. ダウンロード機能について</h6>
+        <ul class="small mb-3 ps-3">
+          <li><strong>ダウンロード</strong> … 各ツールを ZIP 形式でまとめて取得できます。</li>
+          <li>ZIP を解凍し、フォルダ内の <code>index.html</code> を開くことでツールを利用できます。</li>
+          <li>ローカル環境や社内ネットワークなど、用途に応じてご活用ください。</li>
+        </ul>
+
+        <h6 class="mt-3">3. TOPバーのメニュー</h6>
         <ul class="small mb-3 ps-3">
           <li><strong>使い方</strong> … この画面を表示します。</li>
           <li><strong>リンク</strong> … 関連リンク集（公開URLなど）</li>
           <li><strong>更新履歴</strong> … サポ箱の更新情報一覧</li>
         </ul>
 
-        <h6 class="mt-3">3. ローカル環境での注意</h6>
+        <h6 class="mt-3">4. ローカル環境での注意</h6>
         <ul class="small mb-3 ps-3">
           <li><code>file://</code> では CORS 制約で動かないツールがあります。</li>
           <li>XREA やローカルWebサーバー（Live Server 等）をご利用ください。</li>
         </ul>
 
-        <h6 class="mt-3">4. 推奨ブラウザ</h6>
+        <h6 class="mt-3">5. 推奨ブラウザ</h6>
         <p class="small mb-3">
           Edge / Chrome を主に動作確認しています。
         </p>

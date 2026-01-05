@@ -1,7 +1,7 @@
 // content.js — CONTENTブロック（サポ箱TOP本体＋TOPへ戻るボタン）
 //
 // ・サポ箱TOPの概要表示
-// ・ツール一覧カード（T001 / T002 / T003 / T004 / T005 / T006）
+// ・ツール一覧カード（T001 / T002 / T003 / T004 / T005 / T006 / T007 / T008 / T009 / T010 / T011）
 // ・お知らせエリア
 // ・右下「TOPへ戻る」ボタン
 
@@ -63,9 +63,12 @@
               生年月日などの和暦と西暦をすばやく相互変換できるツールです。
               顧客情報登録・確認時に役立ちます。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T001_wareki-seireki/T001index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T001_wareki-seireki/T001index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T001_wareki-seireki/T001.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T001.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -93,9 +96,12 @@
               1文字ずつの読み方（カナ）付きでパスワードを生成できるツールです。
               読み間違いを防ぎたい業務用途に最適です。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T002_pw-gen01/T002index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T002_pw-gen01/T002index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T002_pw-gen01/T002.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T002.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -124,9 +130,12 @@
               PNG形式でダウンロードできるツールです。
               名札・資料・簡易スタンプ用途に利用できます。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T003_hanko/T003index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T003_hanko/T003index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T003_hanko/T003.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T003.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -153,9 +162,12 @@
             <p class="card-text small mb-3">
               画像から文字を読み取り、テキストとして取得できる簡易OCRツールです。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T004_OCR01/T004index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T004_OCR01/T004index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T004_OCR01/T004.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T004.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -183,9 +195,12 @@
               CSVファイルの文字コード（UTF-8／UTF-8(BOM)／Shift_JIS）を判定し、
               ワンクリックで目的の文字コードへ変換してダウンロードできるローカル専用ツールです。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T005_CSV-Convert01/T005index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T005_CSV-Convert01/T005index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T005_CSV-Convert01/T005.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T005.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -215,9 +230,12 @@
               AES-GCM による暗号化を行っています。
               暗号化ソフトのインストールが許可されない環境で有効です。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T006_angou01/T006index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T006_angou01/T006index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T006_angou01/T006.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T006.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -244,9 +262,12 @@
             <p class="card-text small mb-3">
               任意のURLから2次元バーコードを生成します。png形式でダウンロード可能です。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T007_2bar01/T007index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T007_2bar01/T007index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T007_2bar01/T007.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T007.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -274,9 +295,12 @@
               漢字1文字を貼り付けるだけで、代表的な読み・画数・部首・Unicodeを即時表示し、
               口頭伝達用の定型文をコピーできます（完全オフライン対応）。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T008_kanjiyomi01/T008index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T008_kanjiyomi01/T008index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T008_kanjiyomi01/T008.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T008.zip">
+                ダウンロード
               </a>
             </div>
           </div>
@@ -303,46 +327,83 @@
             <p class="card-text small mb-3">
               入電数・応答率・必要人員の目安を、簡易計算で即時に見える化します。
             </p>
-            <div class="mt-auto">
-              <a href="./tools/T009_outou01/T009index.html" class="btn btn-primary btn-sm w-100">
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T009_outou01/T009index.html" class="btn btn-primary btn-sm flex-fill">
                 開く
+              </a>
+              <a href="./tools/T009_outou01/T009.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T009.zip">
+                ダウンロード
               </a>
             </div>
           </div>
         </div>
       </div>
 
-
       <!-- ツールカード：T010 ショートカット確認 -->
-<div class="col-md-4">
-  <div class="card h-100 shadow-sm">
-    <div class="card-header bg-primary-subtle fw-bold">
-      T010 ショートカット確認
-    </div>
-    <div class="card-body d-flex flex-column">
-      <div class="mb-2">
-        <span class="badge rounded-pill fw-semibold me-1"
-              style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
-          ショートカット
-        </span>
-        <span class="badge rounded-pill fw-semibold"
-              style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
-          コンタクトセンター向け
-        </span>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header bg-primary-subtle fw-bold">
+            T010 ショートカット確認
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2">
+              <span class="badge rounded-pill fw-semibold me-1"
+                    style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+                ショートカット
+              </span>
+              <span class="badge rounded-pill fw-semibold"
+                    style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+                コンタクトセンター向け
+              </span>
+            </div>
+            <p class="card-text small mb-3">
+              キーワード検索（例：コピー／スクリーンショット）と、画面上のキー選択・アプリ絞り込みで
+              ショートカットを検索できます。コンタクトセンター業務での作業効率化を目的とした正式版ツールです。
+            </p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T010_sc/T010index.html" class="btn btn-primary btn-sm flex-fill">
+                開く
+              </a>
+              <a href="./tools/T010_sc/T010.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T010.zip">
+                ダウンロード
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="card-text small mb-3">
-        キーワード検索（例：コピー／スクリーンショット）と、画面上のキー選択・アプリ絞り込みで
-        ショートカットを検索できます。コンタクトセンター業務での作業効率化を目的とした正式版ツールです。
-      </p>
-      <div class="mt-auto">
-        <a href="./tools/T010_sc/T010index.html" class="btn btn-primary btn-sm w-100">
-          開く
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
 
+      <!-- ツールカード：T011 フォネティック（口頭伝達補助） -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header bg-primary-subtle fw-bold">
+            T011 フォネティックコード表（口頭伝達補助）
+          </div>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2">
+              <span class="badge rounded-pill fw-semibold me-1"
+                    style="background-color:#0d6efd;color:#ffffff;font-size:0.78rem;">
+                フォネティック
+              </span>
+              <span class="badge rounded-pill fw-semibold"
+                    style="background-color:#20c997;color:#ffffff;font-size:0.78rem;">
+                コンタクトセンター向け
+              </span>
+            </div>
+            <p class="card-text small mb-3">
+              文字を1文字ずつ表示し、読み上げ候補（3候補）を素早く参照できるツールです。
+              口頭での伝達（パスワード・ID・固有名詞など）における聞き間違いを減らしたい場面で役立ちます。
+            </p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="./tools/T011_phonetic/T011index.html" class="btn btn-primary btn-sm flex-fill">
+                開く
+              </a>
+              <a href="./tools/T011_phonetic/T011.zip" class="btn btn-outline-primary btn-sm flex-fill" download="T011.zip">
+                ダウンロード
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
