@@ -9,7 +9,8 @@
 
 // 読み込む testpack の一覧（ここだけ更新すればOK）
 window.TESTPACK_FILES = [
-  './testpacks/testpack_sample_01.js',
+  './testpacks/testpack_test000.js_20260106_092805.js',
+    './testpacks/testpack_sample_01.js',
   './testpacks/testpack_pc_basic_01.js',
   './testpacks/testpack_security_basic_01.js'
 ];
