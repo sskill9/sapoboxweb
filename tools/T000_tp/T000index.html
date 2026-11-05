@@ -1,78 +1,70 @@
 <!-- ===== [HTML] ドキュメント - 宣言と開始タグ ===== -->
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="blue">
 <!-- ===== [HTML] ドキュメント - 宣言と開始タグ ここまで ===== -->
-
 <!-- ===== [HTML] HEAD - メタ/リンク/スタイル ===== -->
 <head>
   <meta charset="UTF-8">
-  <!-- ★ツール固有タイトル：ここを書き換えてください
-       例）Support Tool Box | T001 和暦↔西暦チェッカー
-  -->
-
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-
-  <title>Support Tool Box | テンプレートツール名（ここを書き換えてください）</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- ★ツール説明：ここを書き換えてください
-       ・検索結果やSNSのカードなどに表示される想定の説明文です。
-       ・各ツールごとに、1〜2文で要約を書くことをおすすめします。
-  -->
-  <meta name="description" content="ここにこのツールの説明文を入れてください（例：コールセンター業務を支援するための◯◯チェックツールです）。">
-
-  <!-- 任意：作者情報（必要なければ削除してもOK） -->
+  <title>Support Tool Box | T000 テンプレート</title>
+  <meta name="description" content="ローカル・オフラインで利用できるサポ箱ツールの基本テンプレート。">
   <meta name="author" content="Support Tool Box（サポ箱）">
-
-  <!-- Bootstrap CSS（ローカル配置を想定） -->
-  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/css/bootstrap.min.css -->
-  <link rel="stylesheet" href="./libs/bootstrap-5.3.8-dist/css/bootstrap.min.css">
-
-  <!-- ページ共通スタイル -->
-  <style>
-    /* 右下 TOPへ戻るボタン（content.js が生成する #backToTopBtn 用） */
-    #backToTopBtn {
-      position: fixed;
-      right: 1.5rem;
-      bottom: 1.5rem;
-      z-index: 1030;
-      display: none; /* スクロールしたら表示 */
-    }
-  </style>
+  <!-- 箱アイコン: 既存 BK/old/logo.svg の toolbox 図形を埋め込み。ヘッダーもこのデータを共用。 -->
+  <link id="tool-favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%20width%3D%2232%22%20height%3D%2232%22%3E%3Crect%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%228%22%20fill%3D%22%2324384d%22%2F%3E%3Cg%20transform%3D%22translate%284%204%29%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222.4%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M11%2010V6h10v4%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2210%22%20width%3D%2226%22%20height%3D%2218%22%20rx%3D%223%22%2F%3E%3Cpath%20d%3D%22M3%2017h10m6%200h10%22%2F%3E%3Crect%20x%3D%2213%22%20y%3D%2215%22%20width%3D%226%22%20height%3D%226%22%20rx%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="./shell.css">
+  <script src="./tool-config.js" defer></script>
+  <script src="./shell.js" defer></script>
 </head>
 <!-- ===== [HTML] HEAD - メタ/リンク/スタイル ここまで ===== -->
-
 <!-- ===== [HTML] BODY - 本体/差し込み領域/スクリプト/終了タグ ===== -->
-<body id="page-top" class="d-flex flex-column min-vh-100 bg-light">
-
-  <!-- TOPバー（top.js が中身を差し込む） -->
-  <!-- ★ツール名の表示文言は top.js 内で書き換えてください -->
+<body id="page-top">
+  <a class="skip-link" href="#content-block">本文へ移動</a>
   <div id="top-block"></div>
-
-  <!-- コンテンツ本体（content.js が中身を差し込む） -->
-  <!-- ★ツール固有の説明・入力フォームなどは content.js 側で編集します -->
-  <main id="content-block" class="pb-5"></main>
-
-  <!-- フッター（footer.js が中身を差し込む） -->
-  <!-- sticky footer のため margin-top:auto をここに付与 -->
-  <div id="footer-block" style="margin-top:auto;"></div>
-
-  <!-- Bootstrap JS（バンドル版） -->
-  <!-- 例：tools/T000_tp/libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js -->
-  <script src="./libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- ビュー分割用 JS（ヘッダー／コンテンツ／フッター） -->
-  <script src="./top.js"></script>
-  <script src="./content.js"></script>
-  <script src="./footer.js"></script>
-
-  <!-- モーダル用 JS（使い方／リンク／更新履歴／利用規約） -->
-  <!-- ★各ツールごとに中身のテキストを書き換えて使います -->
-  <script src="./modal-howto.js"></script>
-  <script src="./modal-links.js"></script>
-  <script src="./modal-changelog.js"></script>
-  <script src="./modal-terms.js"></script>
+  <main id="content-block" class="page-width" tabindex="-1">
+    <div class="intro">
+      <div><span class="badge secondary">テンプレート</span> <span class="badge secondary">コンタクトセンター向け</span></div>
+      <p id="tool-description"></p>
+    </div>
+    <!-- ===== [HTML] 共通タブ - 名前と初期表示はtool-config.js、各本文はここで編集 ===== -->
+    <div id="tool-tabs-host">
+      <div id="tool-tabs" hidden></div>
+      <section id="tab-main" data-tool-tab-panel>
+    <!-- ツール固有の本文: この領域を各ツールに合わせて編集します。 -->
+    <section class="tool-grid" aria-label="ツール本体">
+      <div class="panel">
+        <h2>入力エリア（サンプル）</h2>
+        <div class="panel-body">
+          <label for="exampleInput1">入力項目 1</label>
+          <input type="text" id="exampleInput1" placeholder="ここに値を入力">
+          <label for="exampleInput2">入力項目 2</label>
+          <input type="text" id="exampleInput2" placeholder="ここに値を入力">
+          <button type="button" class="primary" disabled>実行（サンプル・未実装）</button>
+          <p class="muted">このテンプレートには業務処理を実装していません。</p>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>結果エリア（サンプル）</h2>
+        <div class="panel-body" id="tool-result" aria-live="polite">
+          <p class="muted">ここに処理結果やメッセージを表示します。</p>
+        </div>
+      </div>
+    </section>
+      </section>
+      <section id="tab-notes" data-tool-tab-panel hidden>
+        <div class="panel"><h2>補足エリア（サンプル）</h2><div class="panel-body">
+          <p>別の入力画面や説明など、ツールに合わせた内容を配置できます。</p>
+          <label for="tabExampleNote">入力の保持を試す</label>
+          <textarea id="tabExampleNote" rows="3" placeholder="タブを切り替えても、この入力は保持されます"></textarea>
+          <p class="muted">ページを閉じたり再読み込みすると、このサンプルの入力は消えます。</p>
+        </div></div>
+      </section>
+    </div>
+    <!-- ===== [HTML] 共通タブ - 本文 ここまで ===== -->
+    <p class="local-note">このテンプレートは自動で外部通信を行いません。表示設定のみ、このブラウザに保存します。</p>
+    <noscript><p>共通メニューを利用するにはJavaScriptを有効にしてください。</p></noscript>
+  </main>
+  <div id="footer-block"></div>
+  <button id="backToTopBtn" type="button" aria-label="ページの先頭へ戻る" hidden>↑</button>
 </body>
 </html>
 <!-- ===== [HTML] BODY - 本体/差し込み領域/スクリプト/終了タグ ここまで ===== -->

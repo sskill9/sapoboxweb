@@ -1,0 +1,24 @@
+サンプル写真の出典・ライセンス
+Title: Shaman Rock from the North Olkhon Island Lake Baikal Russia
+Author: amanderson2
+Original source: https://www.flickr.com/photos/amanderson/14592691354/
+Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Shaman_Rock_from_the_North_Olkhon_Island_Lake_Baikal_Russia_(14592691354).jpg
+Original binary: https://upload.wikimedia.org/wikipedia/commons/d/da/Shaman_Rock_from_the_North_Olkhon_Island_Lake_Baikal_Russia_%2814592691354%29.jpg
+License: Creative Commons Attribution 2.0 Generic (CC BY 2.0)
+License URL: https://creativecommons.org/licenses/by/2.0/
+Legal code: https://creativecommons.org/licenses/by/2.0/legalcode.en
+
+同梱画像はサポ箱で元JPEGを再圧縮し、Base64格納したものです。寸法は維持、パディング・解像度水増しなし。Chrome Canvas JPEG品質指定0.85498046875。撮影情報は同梱JPEGには引き継いでいません。
+実画像: 2,924,065 bytes / 4896×3672 px / JPEG
+SHA256: 9227f3844429b3cede0c7f6a742fd54f9147e7c232da8c1922397c7d008520c1
+撮影: 2014-07-05 / Sony DSC-WX300。最近のスマホで撮影したものではなく、スマホ写真相当の大容量を試す素材です。
+画像の著作権・ライセンスはアプリ本体の利用規約と別です。
+作者表示、タイトル、出典、ライセンスリンクを示して、共有・加工・商用利用ができます。
+本ツールで変換したサンプルを配布・公開する場合も出典等を示し、サイズ縮小・再圧縮した旨を記載してください。
+作者がサポ箱を推奨・承認しているという意味ではありません。
+
+変換後の表示例:
+“Shaman Rock from the North Olkhon Island Lake Baikal Russia” by amanderson2,
+CC BY 2.0 https://creativecommons.org/licenses/by/2.0/
+Source: https://www.flickr.com/photos/amanderson/14592691354/
+Modified: resized/re-encoded with T018 Photosize.
