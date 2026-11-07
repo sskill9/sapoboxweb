@@ -49,7 +49,7 @@
       <a class="brand" href="${escapeHTML(brandHref)}" aria-label="${escapeHTML(brandLabel)}">
         <svg class="brand-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><g fill="none" stroke="white" stroke-width="2.4" stroke-linejoin="round"><path d="M11 10V6h10v4"/><rect x="3" y="10" width="26" height="18" rx="3"/><path d="M3 17h10m6 0h10"/><rect x="13" y="15" width="6" height="6" rx="1"/></g></svg><span>サポ箱<small>Support Tool Box</small></span>
       </a>
-      <div class="tool-identity"><h1><a class="tool-home" href="${escapeHTML(homeFile)}" aria-label="${escapeHTML(config.name)}の先頭へ">${escapeHTML(config.name)}</a></h1><small class="tool-version">${validVersion ? `v${escapeHTML(release.version)}` : '版番号不明'}</small></div>
+      <div class="tool-identity"><h1><a class="tool-home" href="${escapeHTML(homeFile)}" aria-label="${escapeHTML(config.name)}の先頭へ">${escapeHTML(config.name)}</a></h1></div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="toolNavbar">メニュー</button>
       <nav id="toolNavbar" aria-label="サポ箱ツール共通ナビゲーション">
         <button type="button" data-modal="modalHowto">使い方</button>
@@ -104,20 +104,26 @@
   const downloads = {...config.downloads,
     site: distributionReady ? `./${archiveName}` : '',
     git: distributionReady ? `https://github.com/${release.repository}/releases/tag/${releaseTag}` : ''};
-  const downloadCard = (kind, name) => {
+  const downloadCard = (kind, name, description, path) => {
     const direct = kind === 'site' ? localZIP(downloads[kind]) : '';
     const url = direct || externalURL(downloads[kind]);
-    return `<section class="download-option"><h3>${name}</h3>${url
-      ? direct ? `<a class="button" href="${escapeHTML(direct)}" download="${escapeHTML(archiveName)}">ZIPをダウンロード</a>` : `<a class="button" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">この版のGit配布ページを開く ↗</a>`
-      : '<button type="button" disabled>配布準備中</button>'}</section>`;
+    return `<section class="download-option" aria-labelledby="download-${kind}-title"><div class="download-heading">${utilityIcon(path)}<h3 id="download-${kind}-title">${name}</h3><span class="badge secondary">${url?'配布先設定済み':'準備中'}</span></div><p>${description}</p>${url
+      ? direct ? `<a class="button" href="${escapeHTML(direct)}" download="${escapeHTML(archiveName)}" aria-label="WEBからZIPをダウンロード">ZIPをダウンロード</a><p class="muted download-caption">ZIPを端末に保存します。保存完了はブラウザのダウンロード一覧で確認してください。</p>` : `<a class="button" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer" aria-label="${name}の配布先を別タブで開く">この版のGit配布ページを開く<span aria-hidden="true"> ↗</span></a><p class="muted download-caption">別タブで開きます。配布先の版・内容を確認して保存してください。</p>`
+      : '<button type="button" disabled>配布準備中</button><p class="muted download-caption">公開後にこちらから取得できます。</p>'}</section>`;
   };
+  const entryFile=typeof downloads.entryFile==='string'&&downloads.entryFile?downloads.entryFile:'開始用HTML';
+  const releaseLabel=typeof downloads.releaseLabel==='string'?downloads.releaseLabel:'';
+  const downloadNotice=typeof downloads.notice==='string'?downloads.notice:'';
   modals.modalDownload = {title:'ダウンロード',html:`
-    <p class="download-intro">${escapeHTML(config.name)} / ${escapeHTML(releaseHeading)}</p>
+    <p class="download-intro">${escapeHTML(config.name)}を端末に保存して、オフラインで使えます。</p>
+    ${releaseLabel?`<p class="badge">${escapeHTML(releaseLabel)}</p>`:''}
     <p class="download-notice">${distributionReady ? 'WEB・Gitのどちらからでもダウンロードできます。配布内容は同じです。' : 'この版は未公開候補、または配布確認前です。人力確認と公開先の同一ZIP確認が完了するまで、配布リンクは表示しません。'}</p>
-    <div class="download-options">${downloadCard('site','WEB')}${downloadCard('git','Git')}</div>
-    <p>Gitでは上記の版に対応するZIPを選んでください。自動生成のSource code ZIPではありません。</p>
-    <h3>保存してから使うまで</h3><ol><li>ZIPを保存します。</li><li>中身をすべて同じフォルダへ展開します。</li><li><code>${escapeHTML(homeFile)}</code> をブラウザで開きます。</li></ol>
-    <p class="muted">外部サイトやGitへの接続、WEBからの取得にはインターネット接続が必要です。展開後の通常処理は同梱ファイルを使用します。ローカルHTMLの起動・保存は端末やブラウザにより制限されます。ZIP内から直接HTMLを開かないでください。</p>`};
+    ${downloadNotice?`<p class="muted">${escapeHTML(downloadNotice)}</p>`:''}
+    <div class="download-options">${downloadCard('site','WEB','サポ箱サイトの配布先から取得します。','<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-6 6-6 12 0 18 6-6 6-12 0-18z"/>')}${downloadCard('git','Git','Gitの配布ページで、公開されたZIPを選んで取得します。','<circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M6 7v10m0-4c0-5 12 0 12-6"/>')}</div>
+    <p class="download-connection">配布先を開く・ZIPを取得する際は、インターネット接続が必要です。</p>
+    <p>Gitではこのツールの配布ZIPを選んでください。自動生成のSource code ZIPではありません。</p>
+    <h3>保存してから使うまで</h3><ol class="download-steps"><li><strong>ZIPを保存</strong><p>WEBまたはGitの配布先で、使いたい版のZIPを端末に保存します。</p></li><li><strong>すべて展開</strong><p>ZIPの中身をフォルダへ展開します。中のファイルは同じ場所にまとめて置いてください。</p></li><li><strong>HTMLを開く</strong><p>展開したフォルダの <code>${escapeHTML(entryFile)}</code> をブラウザで開きます。取得後の通常利用はオフラインで動作します。</p></li></ol>
+    <p class="muted">スマートフォンではファイル管理アプリでZIPを展開します。ローカルHTMLを開けるかは端末・ブラウザによって異なります。ZIPの中から直接HTMLを開かないでください。外部リンク先の閲覧には接続が必要です。</p>`};
   modals.modalCalculator = {title:'簡易電卓',html:`
     <label for="calcExpression">計算式</label><input id="calcExpression" type="text" inputmode="text" maxlength="200" autocomplete="off" spellcheck="false" aria-describedby="calcHint">
     <div class="calc-result-panel"><p id="calcResult" class="utility-result" role="status">結果：—</p><button type="button" id="calcCopy" disabled>結果をコピー</button><p id="calcCopyStatus" class="muted" role="status"></p></div>

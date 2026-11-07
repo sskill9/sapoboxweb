@@ -1,7 +1,7 @@
 // ===== [設定] T018 ツール情報 =====
 window.SAPO_TOOL = {
   // release.version が版番号の正本。公開・同一ZIP検証前は両フラグを false に保つ。
-  "release": {"version": "1.1.0", "templateVersion": "1.0.0", "date": "2026-11-05", "repository": "sskill9/sapoboxweb", "published": false, "sameArchiveVerified": false, "changes": ["版番号・日付・配布ZIP名・Gitタグを設定から統一。", "簡易電卓の精度と限界の表示、設定とメモの保存処理を改善。", "配布ファイルの依存関係検証と復元用の旧版保持を整備。"]},
+  "release": {"version":"1.1.1","templateVersion":"1.0.0","date":"2026-11-08","repository":"sskill9/sapoboxweb","published":false,"sameArchiveVerified":false,"changes":["ダウンロードモーダルのカード・説明・保存手順をT000の構成に統一。","ヘッダーのバージョン表示を非表示に変更。更新履歴と配布リンクの版管理は維持。"]},
   "distribution": {"files": ["T018index.html", "shell.css", "shell.js", "tool-config.js", "README.txt", "VERSIONING.txt", "build-release.py", "photo-tool.js", "sample-photo.js", "SAMPLE-LICENSE.txt"], "dynamicDependencies": ["sample-photo.js"], "licenseFiles": ["SAMPLE-LICENSE.txt"]},
   "id": "T018",
   "name": "T018 写真のメール送信用サイズ変換",
@@ -32,7 +32,7 @@ window.SAPO_TOOL = {
     },
     "modalChangelog": {
       "title": "更新履歴",
-      "html": "<p><span class=\"badge bg-primary me-2\">2026-11-05</span> 版番号不明 — 初版・未公開検証版</p><ul><li>単一写真の読み込み、容量スライダー、JPEG／PNG変換と保存。</li><li>T000最新版の共通設定・便利ツールを継承。</li></ul>"
+      "html": "<section><p class=\"release-heading\"><span class=\"badge release-date\">2026-11-05</span><span class=\"badge release-version\">v1.1.0</span></p><ul><li>版番号・日付・配布ZIP名・Gitタグを設定から統一。</li><li>簡易電卓の精度と限界の表示、設定とメモの保存処理を改善。</li><li>配布ファイルの依存関係検証と復元用の旧版保持を整備。</li></ul></section><p><span class=\"badge bg-primary me-2\">2026-11-05</span> 版番号不明 — 初版・未公開検証版</p><ul><li>単一写真の読み込み、容量スライダー、JPEG／PNG変換と保存。</li><li>T000最新版の共通設定・便利ツールを継承。</li></ul>"
     }
   }
 };
